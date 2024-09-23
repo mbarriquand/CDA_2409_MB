@@ -20,7 +20,7 @@
 
         // Générer un tableau pour stocker les données utilisateur
 
-        int[] nombres = { numA, numB, numC };
+        int[] nombres = {numA, numB, numC};
 
         // Trier les données utilisateur
 
