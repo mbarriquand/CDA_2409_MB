@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\mbarriquand\\Documents\\GitHub\\CDA_2409_MB\\01 - Algorithmes\\TriDeNombre\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{DE98208C-2606-467A-82BE-59FDB4BC3AF2}|TriDeNombre.csproj|c:\\users\\mbarriquand\\documents\\github\\cda_2409_mb\\01 - algorithmes\\tridenombre\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE98208C-2606-467A-82BE-59FDB4BC3AF2}|TriDeNombre.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\mbarriquand\\Documents\\GitHub\\CDA_2409_MB\\01 - Algorithmes\\TriDeNombre\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\mbarriquand\\Documents\\GitHub\\CDA_2409_MB\\01 - Algorithmes\\TriDeNombre\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAxwCQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-23T08:24:15.836Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
