@@ -1,0 +1,15 @@
+C:\Users\mbarriquand\Documents\GitHub\CDA_2409_MB\01 - Algorithmes\TriDeNombre\obj\Debug\net8.0\TriDeNombre.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mbarriquand\Documents\GitHub\CDA_2409_MB\01 - Algorithmes\TriDeNombre\obj\Debug\net8.0\TriDeNombre.AssemblyInfoInputs.cache
+C:\Users\mbarriquand\Documents\GitHub\CDA_2409_MB\01 - Algorithmes\TriDeNombre\obj\Debug\net8.0\TriDeNombre.AssemblyInfo.cs
+C:\Users\mbarriquand\Documents\GitHub\CDA_2409_MB\01 - Algorithmes\TriDeNombre\obj\Debug\net8.0\TriDeNombre.csproj.CoreCompileInputs.cache
+C:\Users\mbarriquand\Documents\GitHub\CDA_2409_MB\01 - Algorithmes\TriDeNombre\obj\Debug\net8.0\TriDeNombre.sourcelink.json
+C:\Users\mbarriquand\Documents\GitHub\CDA_2409_MB\01 - Algorithmes\TriDeNombre\bin\Debug\net8.0\TriDeNombre.exe
+C:\Users\mbarriquand\Documents\GitHub\CDA_2409_MB\01 - Algorithmes\TriDeNombre\bin\Debug\net8.0\TriDeNombre.deps.json
+C:\Users\mbarriquand\Documents\GitHub\CDA_2409_MB\01 - Algorithmes\TriDeNombre\bin\Debug\net8.0\TriDeNombre.runtimeconfig.json
+C:\Users\mbarriquand\Documents\GitHub\CDA_2409_MB\01 - Algorithmes\TriDeNombre\bin\Debug\net8.0\TriDeNombre.dll
+C:\Users\mbarriquand\Documents\GitHub\CDA_2409_MB\01 - Algorithmes\TriDeNombre\bin\Debug\net8.0\TriDeNombre.pdb
+C:\Users\mbarriquand\Documents\GitHub\CDA_2409_MB\01 - Algorithmes\TriDeNombre\obj\Debug\net8.0\TriDeNombre.dll
+C:\Users\mbarriquand\Documents\GitHub\CDA_2409_MB\01 - Algorithmes\TriDeNombre\obj\Debug\net8.0\refint\TriDeNombre.dll
+C:\Users\mbarriquand\Documents\GitHub\CDA_2409_MB\01 - Algorithmes\TriDeNombre\obj\Debug\net8.0\TriDeNombre.pdb
+C:\Users\mbarriquand\Documents\GitHub\CDA_2409_MB\01 - Algorithmes\TriDeNombre\obj\Debug\net8.0\TriDeNombre.genruntimeconfig.cache
+C:\Users\mbarriquand\Documents\GitHub\CDA_2409_MB\01 - Algorithmes\TriDeNombre\obj\Debug\net8.0\ref\TriDeNombre.dll
