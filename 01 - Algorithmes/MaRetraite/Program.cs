@@ -16,7 +16,12 @@ retraite = 60;
 
 // Vérification de l'âge
 
-    if (age > retraite)
+    if (age < 0)
+    {
+        Console.WriteLine("La valeur fournie n’est pas un âge valide.");
+    } 
+    
+    else if (age > retraite)
     {
         Console.WriteLine("Vous êtes à la retraite depuis " + (age - retraite) + " ans.");
     }
