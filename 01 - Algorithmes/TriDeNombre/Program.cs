@@ -1,5 +1,17 @@
 ﻿// Lire 3 nombres entier A, B et C (fournis par l'utilisateur) puis les afficher dans l’ordre croissant.
 
+// il vaut mieux déclarer les variables séparement plutôt que de le faire à la volée
+/*
+int numA;
+int numB;
+int numC;
+int[] nombres;
+string saisieUtilisateur;
+
+ex : saisieUtilisateur = Console.ReadLine(); // Récupération d'une saisie utilisateur
+numA = int.Parse(saisieUtilisateur); // Conversion de la saisie en nombre entier
+*/
+
 // Récupérer les données utilisateur
 
 Console.WriteLine("Entrer le premier nombre:");
