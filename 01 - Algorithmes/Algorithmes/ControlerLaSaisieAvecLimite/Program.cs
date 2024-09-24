@@ -19,4 +19,6 @@ Note : Le bon mot de passe est formation */
 Console.WriteLine("Exercice 3a.2 : Contrôler la saisie avec limite");
 
 
+
+
     
