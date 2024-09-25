@@ -21,6 +21,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Intervalle", "Intervalle\In
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiviseursNombre", "DiviseursNombre\DiviseursNombre.csproj", "{BFDFB959-817D-41F9-A0A1-9B7703FAFBA5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JeuDeLaFourchette", "JeuDeLaFourchette\JeuDeLaFourchette.csproj", "{09488576-339C-4FA4-94A3-F8036F227A3A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NombrePremier", "NombrePremier\NombrePremier.csproj", "{81030CBF-B6BD-40E8-A0AB-5AF6EEC8CF6C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +67,14 @@ Global
 		{BFDFB959-817D-41F9-A0A1-9B7703FAFBA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BFDFB959-817D-41F9-A0A1-9B7703FAFBA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BFDFB959-817D-41F9-A0A1-9B7703FAFBA5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09488576-339C-4FA4-94A3-F8036F227A3A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09488576-339C-4FA4-94A3-F8036F227A3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09488576-339C-4FA4-94A3-F8036F227A3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09488576-339C-4FA4-94A3-F8036F227A3A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81030CBF-B6BD-40E8-A0AB-5AF6EEC8CF6C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81030CBF-B6BD-40E8-A0AB-5AF6EEC8CF6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81030CBF-B6BD-40E8-A0AB-5AF6EEC8CF6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81030CBF-B6BD-40E8-A0AB-5AF6EEC8CF6C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
