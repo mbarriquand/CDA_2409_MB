@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35222.181
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControlerLaSaisie", "ControlerLaSaisie\ControlerLaSaisie.csproj", "{7FDB3B5A-AA05-4EAC-B24F-07B5D3ABBF66}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ControlerLaSaisie", "ControlerLaSaisie\ControlerLaSaisie.csproj", "{7FDB3B5A-AA05-4EAC-B24F-07B5D3ABBF66}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControlerLaSaisieAvecLimite", "ControlerLaSaisieAvecLimite\ControlerLaSaisieAvecLimite.csproj", "{975899B4-B975-4F65-88D1-0E6B39417313}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ControlerLaSaisieAvecLimite", "ControlerLaSaisieAvecLimite\ControlerLaSaisieAvecLimite.csproj", "{975899B4-B975-4F65-88D1-0E6B39417313}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MaBicyclette", "MaBicyclette\MaBicyclette.csproj", "{3DFA0D03-FB0E-4BB2-998B-DFA8788CDF4F}"
 EndProject
@@ -16,6 +16,10 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TriDeNombre", "TriDeNombre\TriDeNombre.csproj", "{0C7E721F-630E-42FB-AF38-355EABF145AA}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TriDeNombre++", "TriDeNombre++\TriDeNombre++.csproj", "{FC95DA33-F51D-4246-9219-5A50A767FA47}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Intervalle", "Intervalle\Intervalle.csproj", "{45348EA1-6960-41FD-8838-95C09B8BADCB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiviseursNombre", "DiviseursNombre\DiviseursNombre.csproj", "{BFDFB959-817D-41F9-A0A1-9B7703FAFBA5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +55,14 @@ Global
 		{FC95DA33-F51D-4246-9219-5A50A767FA47}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FC95DA33-F51D-4246-9219-5A50A767FA47}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FC95DA33-F51D-4246-9219-5A50A767FA47}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45348EA1-6960-41FD-8838-95C09B8BADCB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45348EA1-6960-41FD-8838-95C09B8BADCB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45348EA1-6960-41FD-8838-95C09B8BADCB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45348EA1-6960-41FD-8838-95C09B8BADCB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BFDFB959-817D-41F9-A0A1-9B7703FAFBA5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFDFB959-817D-41F9-A0A1-9B7703FAFBA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFDFB959-817D-41F9-A0A1-9B7703FAFBA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFDFB959-817D-41F9-A0A1-9B7703FAFBA5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
