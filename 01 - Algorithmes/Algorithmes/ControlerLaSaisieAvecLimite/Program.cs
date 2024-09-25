@@ -12,13 +12,33 @@ Note : Le bon mot de passe est formation */
 
 // VARIABLES
 
-
+string mdp;
+string saisieUtilisateur;
 
 // TRAITEMENT
 
+mdp = "formation";
+
 Console.WriteLine("Exercice 3a.2 : Contrôler la saisie avec limite");
 
+for (int i = 0; i < 3; i++)
+{
+    Console.WriteLine("Saisissez votre mot de passe :");
+    saisieUtilisateur = Console.ReadLine();
 
+    if (saisieUtilisateur == mdp)
+    {
+        Console.WriteLine("Vous êtes connecté");
+        System.Environment.Exit(1);
+    }
 
+    else if (i == 3)
+    {
+        Console.WriteLine("Votre compte est bloqué");
+    }
 
-    
+    else
+    {
+        Console.WriteLine("Mot de passe erroné");
+    }
+}
