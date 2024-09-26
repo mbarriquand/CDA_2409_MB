@@ -17,13 +17,19 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TriDeNombre", "TriDeNombre\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TriDeNombre++", "TriDeNombre++\TriDeNombre++.csproj", "{FC95DA33-F51D-4246-9219-5A50A767FA47}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Intervalle", "Intervalle\Intervalle.csproj", "{45348EA1-6960-41FD-8838-95C09B8BADCB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Intervalle", "Intervalle\Intervalle.csproj", "{45348EA1-6960-41FD-8838-95C09B8BADCB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiviseursNombre", "DiviseursNombre\DiviseursNombre.csproj", "{BFDFB959-817D-41F9-A0A1-9B7703FAFBA5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DiviseursNombre", "DiviseursNombre\DiviseursNombre.csproj", "{BFDFB959-817D-41F9-A0A1-9B7703FAFBA5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JeuDeLaFourchette", "JeuDeLaFourchette\JeuDeLaFourchette.csproj", "{09488576-339C-4FA4-94A3-F8036F227A3A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JeuDeLaFourchette", "JeuDeLaFourchette\JeuDeLaFourchette.csproj", "{09488576-339C-4FA4-94A3-F8036F227A3A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NombrePremier", "NombrePremier\NombrePremier.csproj", "{81030CBF-B6BD-40E8-A0AB-5AF6EEC8CF6C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NombrePremier", "NombrePremier\NombrePremier.csproj", "{81030CBF-B6BD-40E8-A0AB-5AF6EEC8CF6C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BarnabeFaitSesCourses", "BarnabeFaitSesCourses\BarnabeFaitSesCourses.csproj", "{97A1FF6E-4019-41AF-8E08-AA60519EE13F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RechercheNombreTableau", "RechercheNombreTableau\RechercheNombreTableau.csproj", "{94CF3F52-1C7F-42ED-A207-02C145002628}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RechercheLettreDansPhrase", "RechercheLettreDansPhrase\RechercheLettreDansPhrase.csproj", "{C8C92BB1-DE81-47CE-A17C-C94082166168}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -75,6 +81,18 @@ Global
 		{81030CBF-B6BD-40E8-A0AB-5AF6EEC8CF6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{81030CBF-B6BD-40E8-A0AB-5AF6EEC8CF6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{81030CBF-B6BD-40E8-A0AB-5AF6EEC8CF6C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97A1FF6E-4019-41AF-8E08-AA60519EE13F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97A1FF6E-4019-41AF-8E08-AA60519EE13F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97A1FF6E-4019-41AF-8E08-AA60519EE13F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97A1FF6E-4019-41AF-8E08-AA60519EE13F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{94CF3F52-1C7F-42ED-A207-02C145002628}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94CF3F52-1C7F-42ED-A207-02C145002628}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94CF3F52-1C7F-42ED-A207-02C145002628}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94CF3F52-1C7F-42ED-A207-02C145002628}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C8C92BB1-DE81-47CE-A17C-C94082166168}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8C92BB1-DE81-47CE-A17C-C94082166168}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8C92BB1-DE81-47CE-A17C-C94082166168}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8C92BB1-DE81-47CE-A17C-C94082166168}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
