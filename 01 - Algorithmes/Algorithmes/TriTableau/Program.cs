@@ -24,9 +24,9 @@
             // TRAITEMENT
 
             Console.Write("Soit un tableau : ");
-            foreach (int item in tableau)
+            for (int i = 0; i < tableau.Length; i++)
             {
-                Console.Write(item.ToString() + " ");
+                Console.Write(tableau[i] + " ");
             }
 
             for (int i = 0; i < tableau.Length; i++)
@@ -44,7 +44,7 @@
 
             // AFFICHAGE
 
-            Console.Write("\nSoit le même tableau trié dans l'ordre croissant :");
+            Console.Write("\nSoit le même tableau trié dans l'ordre croissant : ");
 
             for (int i = 0; i < tableau.Length; i++)
             {
