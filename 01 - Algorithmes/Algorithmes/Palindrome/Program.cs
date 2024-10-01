@@ -32,7 +32,8 @@ namespace Palindrome
 
             // VARIABLES
 
-            string saisieUtilisateur;
+            string stockageSaisie;
+            string traitementSaisie;
             char[] palindrome;
             char[] palindromeInverse;
             bool palOk = true;
@@ -40,23 +41,25 @@ namespace Palindrome
             // TRAITEMENT
 
             Console.WriteLine("Est-ce un palindrome ? ");
-            saisieUtilisateur = Console.ReadLine().Replace(" ", "").ToLower();
+            stockageSaisie = Console.ReadLine();
+            traitementSaisie = stockageSaisie.Replace(" ", "").ToLower();
 
             // créer et alimenter un tableau pour les donners utilisateurs
 
-            palindrome = saisieUtilisateur.ToCharArray();
+            palindrome = traitementSaisie.ToCharArray();
 
             // vérifier s'il y a un point.
 
-            while (saisieUtilisateur.Length < 1 || !saisieUtilisateur.Contains("."))
+            while (traitementSaisie.Length < 1 || !traitementSaisie.Contains("."))
             {
                 Console.WriteLine("La phrase est vide ou ne se termine pas par un point.Veuillez recommencer.");
-                saisieUtilisateur = Console.ReadLine().Replace(" ", "").ToLower();
+                stockageSaisie = Console.ReadLine();
+                traitementSaisie = stockageSaisie.Replace(" ", "").ToLower();
             }
 
             // créer et alimenter un tableau verification avec le array.reverse
 
-            palindromeInverse = saisieUtilisateur.ToCharArray();
+            palindromeInverse = traitementSaisie.ToCharArray();
             Array.Reverse(palindromeInverse);
 
             // vérifiez les égalités dans les tableaux
@@ -78,11 +81,11 @@ namespace Palindrome
 
             if (palOk == true)
             {
-                Console.WriteLine(saisieUtilisateur + " est un palindrome.");
+                Console.WriteLine(stockageSaisie + " est un palindrome.");
             }
             else
             {
-                Console.WriteLine(saisieUtilisateur + " n'est pas un palindrome.");
+                Console.WriteLine(stockageSaisie + " n'est pas un palindrome.");
             }
         }
     }
