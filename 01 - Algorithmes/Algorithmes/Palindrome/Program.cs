@@ -1,8 +1,4 @@
-﻿using System.Reflection.PortableExecutable;
-using System.Linq;
-using System.Drawing;
-
-namespace Palindrome
+﻿namespace Palindrome
 {
     internal class Program
     {
