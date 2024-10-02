@@ -44,8 +44,7 @@ namespace MotDePasseSecurise
                 Regex.IsMatch(motDePasse, regexLettresMinuscules) &&
                 Regex.IsMatch(motDePasse, regexLettresMajuscules) &&
                 Regex.IsMatch(motDePasse, regexChiffres) && 
-                motDePasse.Length >= 12 || 
-                (Regex.IsMatch(motDePasse, regexCaracteresSpeciaux) && motDePasse.Length >= 20)
+                (Regex.IsMatch(motDePasse, regexCaracteresSpeciaux) || motDePasse.Length > 20) && motDePasse.Length >= 12
                 )
             {
                 Console.WriteLine("Mot de passe OK");
