@@ -41,6 +41,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FruitsEtLegumes", "FruitsEt
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LesCapitales", "LesCapitales\LesCapitales.csproj", "{6F9FBDBE-1C19-4D83-BCA4-ADBB7B6F5F18}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MotDePasseSecurise", "MotDePasseSecurise\MotDePasseSecurise.csproj", "{3EE2936B-4F8E-4C11-A87E-17A9C0385582}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -123,6 +125,10 @@ Global
 		{6F9FBDBE-1C19-4D83-BCA4-ADBB7B6F5F18}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6F9FBDBE-1C19-4D83-BCA4-ADBB7B6F5F18}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6F9FBDBE-1C19-4D83-BCA4-ADBB7B6F5F18}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3EE2936B-4F8E-4C11-A87E-17A9C0385582}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3EE2936B-4F8E-4C11-A87E-17A9C0385582}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3EE2936B-4F8E-4C11-A87E-17A9C0385582}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3EE2936B-4F8E-4C11-A87E-17A9C0385582}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
