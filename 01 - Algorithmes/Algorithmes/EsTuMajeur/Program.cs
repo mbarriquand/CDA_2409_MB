@@ -1,3 +1,4 @@
+
 ﻿namespace EsTuMajeur;
 internal class Program
 {
@@ -7,6 +8,7 @@ internal class Program
         Afficher “Vous êtes majeur” ou “Vous êtes mineur” selon le cas.
         Pour un nombre négatif le message doit être “Vous n’êtes pas encore né”.
         La majorité est fixée à 18 ans. */
+
 
         // VARIABLE
 
@@ -43,5 +45,5 @@ internal class Program
             Console.Write(ex.Message);
         }
     }
-}
 
+}
