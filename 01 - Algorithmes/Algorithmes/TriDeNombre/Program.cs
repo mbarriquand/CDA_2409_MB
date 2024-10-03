@@ -16,6 +16,10 @@ numA = int.Parse(saisieUtilisateur); // Conversion de la saisie en nombre entier
 
 using MBarriquandTools;
 
+int numA;
+int numB;
+int numC;
+
 numA = ConsoleTools.DemanderNombreEntier("Entrez le premier nombre: ");
 numB = ConsoleTools.DemanderNombreEntier("Entrer le deuxième nombre: ");
 numC = ConsoleTools.DemanderNombreEntier("Entrer le troisième nombre: ");
