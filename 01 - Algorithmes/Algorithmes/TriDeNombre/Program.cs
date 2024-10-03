@@ -14,14 +14,20 @@ numA = int.Parse(saisieUtilisateur); // Conversion de la saisie en nombre entier
 
 // Récupérer les données utilisateur
 
-Console.WriteLine("Entrer le premier nombre:");
+using MBarriquandTools;
+
+numA = ConsoleTools.DemanderNombreEntier("Entrez le premier nombre: ");
+numB = ConsoleTools.DemanderNombreEntier("Entrer le deuxième nombre: ");
+numC = ConsoleTools.DemanderNombreEntier("Entrer le troisième nombre: ");
+
+/*Console.WriteLine("Entrer le premier nombre:");
 int numA = int.Parse(Console.ReadLine());
 
 Console.WriteLine("Entrer le deuxième nombre:");
 int numB = int.Parse(Console.ReadLine());
 
 Console.WriteLine("Entrer le troisième nombre:");
-int numC = int.Parse(Console.ReadLine());
+int numC = int.Parse(Console.ReadLine());*/
 
 // Générer un tableau pour stocker les données utilisateur
 
@@ -38,4 +44,4 @@ Console.WriteLine("Vos nombres triés dans l'ordre croissant sont :");
     for (int i = 0; i < nombres.Length; i++)
     {
     Console.WriteLine(nombres[i]);
-    }
+    } 
