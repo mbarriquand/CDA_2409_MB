@@ -8,12 +8,14 @@
             
             int valeurRetour;
 
+            bool saisieOk;
+
             do
             {
                 Console.WriteLine(_question);
 
                 saisieUtilisateur = Console.ReadLine() ?? "";
-
+                                
                 /* valeurRetour = int.Parse(saisieUtilisateur);
                 valeurRetour = Convert.ToInt32(saisieUtilisateur); // renvoie vers int.Parse mais effectue un contrôle
                                                                    // renvoie 0 si la valeur est nulle
@@ -24,9 +26,45 @@
 
                 } */
 
-            } while (!int.TryParse(saisieUtilisateur, out valeurRetour)); // on recommence la conversion tant que la condition est fausse
+                saisieOk = int.TryParse(saisieUtilisateur, out valeurRetour);
+
+                if(!saisieOk)
+                {
+                    Console.WriteLine("Saisie invalide, recommencez !");
+                }
+
+            } while (!saisieOk); 
 
             return valeurRetour;
         }
+
+        public static float DemanderUnFloatPositif(string _questionFloat)
+        {
+            string saisieUtilisateur;
+
+            float valeurRetour;
+
+            bool saisieOk;
+
+            do
+            {
+                Console.WriteLine(_questionFloat);
+                
+                saisieUtilisateur = Console.ReadLine() ?? "";
+
+                saisieOk = float.TryParse(saisieUtilisateur,out valeurRetour) && valeurRetour >= 0;
+
+                
+                if (!saisieOk)
+                {
+                        Console.WriteLine("Saisie invalide, recommencez !");
+                }
+                
+
+            } while (!saisieOk);
+
+            return valeurRetour;
+        }
+
     }
 }
