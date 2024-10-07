@@ -55,47 +55,38 @@ namespace MBarriquandTools
                 saisieUtilisateur = Console.ReadLine() ?? "";
 
                 saisieOk = float.TryParse(saisieUtilisateur,out valeurRetour) && valeurRetour >= 0;
-
-                
+                                
                 if (!saisieOk)
                 {
                         Console.WriteLine("Saisie invalide, recommencez !");
                 }
                 
-
             } while (!saisieOk);
 
             return valeurRetour;
-        } 
-              
-        public static string ComposantCBRegex(string _questionRegex)
+        }
+
+        public static string DemanderNumCarteBancaire(string _questionCB)
         {
             string saisieUtilisateur;
-            string RegexCB;
-            bool saisieCBOk;
-
-            RegexCB = (@"^[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{4}");
+            bool saisieOk;
 
             do
             {
-                Console.Write(_questionRegex);
+                Console.WriteLine(_questionCB);
+
                 saisieUtilisateur = Console.ReadLine() ?? "";
-               if (Regex.IsMatch(saisieUtilisateur, RegexCB))
+
+                saisieOk = RegexTools.FormatCarteBancaire(saisieUtilisateur);
+
+                if (!saisieOk)
                 {
-                    Console.WriteLine("Format valide");
-                    saisieCBOk = true;
+                    Console.WriteLine("Saisie invalide, recommencez !");
                 }
 
-               else if (!Regex.IsMatch(saisieUtilisateur, RegexCB))
-                {
-                    Console.WriteLine("Format invalide, recommencez !");
-                    saisieCBOk = false;
-                }
+            } while (!saisieOk);
 
-            }
-            while (saisieUtilisateur != RegexCB);
-
-            return RegexCB;
+            return saisieUtilisateur;
         }
     }
 }
