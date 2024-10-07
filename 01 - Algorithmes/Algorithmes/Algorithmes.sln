@@ -45,7 +45,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MotDePasseSecurise", "MotDe
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MBarriquandTools", "MBarriquandTools\MBarriquandTools.csproj", "{8C08D24C-876C-4954-B302-1B0FC5716F5E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VerificationCB", "VerificationCB\VerificationCB.csproj", "{7F8722DA-2828-4490-A2A5-1B9ACA03E067}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExercicesRegex", "VerificationCB\ExercicesRegex.csproj", "{7F8722DA-2828-4490-A2A5-1B9ACA03E067}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

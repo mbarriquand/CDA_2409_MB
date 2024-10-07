@@ -1,4 +1,5 @@
 ﻿using MBarriquandTools;
+using System.Text.RegularExpressions;
 
 namespace VerificationCB
 {
@@ -7,9 +8,11 @@ namespace VerificationCB
     {
         static void Main(string[] args)
         {
-            string saisieUtilisateur;
+            string cb = ConsoleTools.DemanderNumCarteBancaire("");
 
-            saisieUtilisateur = ConsoleTools.ComposantCBRegex("Verifiez le format CB :");
+
+
+            // saisieUtilisateur = RegexTools.FormatCarteBanquaire("Verifiez le format CB :");
 
         }
     }
