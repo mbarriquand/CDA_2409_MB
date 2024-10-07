@@ -11,7 +11,6 @@ namespace VerificationCB
             string cb = ConsoleTools.DemanderNumCarteBancaire("");
 
 
-
             // saisieUtilisateur = RegexTools.FormatCarteBanquaire("Verifiez le format CB :");
 
         }

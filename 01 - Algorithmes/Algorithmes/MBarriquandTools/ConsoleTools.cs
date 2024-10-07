@@ -74,8 +74,8 @@ namespace MBarriquandTools
             do
             {
                 Console.WriteLine(_questionCB);
-
-                saisieUtilisateur = Console.ReadLine() ?? "";
+                
+                saisieUtilisateur = Console.ReadLine() ?? " ";
 
                 saisieOk = RegexTools.FormatCarteBancaire(saisieUtilisateur);
 
@@ -84,6 +84,28 @@ namespace MBarriquandTools
                     Console.WriteLine("Saisie invalide, recommencez !");
                 }
 
+            } while (!saisieOk);
+
+            return saisieUtilisateur;
+        }
+
+        public static string DemanderPrenomOuNom(string _questionNom)
+        {
+            string saisieUtilisateur;
+            bool saisieOk;
+
+            do
+            {
+                Console.WriteLine(_questionNom);
+
+                saisieUtilisateur = Console.ReadLine() ?? " ";
+
+                saisieOk = RegexTools.FormatNom(saisieUtilisateur);
+
+                if (!saisieOk) ;
+                {
+                    Console.WriteLine("Saisie invalide, recommencez !");
+                }
             } while (!saisieOk);
 
             return saisieUtilisateur;

@@ -13,14 +13,14 @@ namespace MBarriquandTools
 
         }
 
-        public static bool FormatPrenom(string _prenomAVerifier)
+        public static bool FormatNom(string _nomAVerifier, int _longueurMinAcceptee = 30)
         {
-            Regex rgxPrenom = new Regex(@"^([a-zA-Z\- ]{2,25})$");
+            Regex rgxPrenom = new Regex(@"^([a-zA-Z\- ]{2,"+_longueurMinAcceptee+"})$");
             
             // string rgxPrenom;
             // rgxPrenom = @"^([a-zA-Z\- ]{2,25})$";
 
-            return rgxPrenom.IsMatch(_prenomAVerifier);
+            return rgxPrenom.IsMatch(_nomAVerifier);
         }               
     }
 }
