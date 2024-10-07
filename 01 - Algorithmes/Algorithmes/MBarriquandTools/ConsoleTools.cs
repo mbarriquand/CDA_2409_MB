@@ -4,6 +4,32 @@ namespace MBarriquandTools
 {
     public class ConsoleTools
     {
+        public static float DemanderFloatPositif(string _questionFloat)
+        {
+            string saisieUtilisateur;
+
+            float valeurRetour;
+
+            bool saisieOk;
+
+            do
+            {
+                Console.WriteLine(_questionFloat);
+                
+                saisieUtilisateur = Console.ReadLine() ?? "";
+
+                saisieOk = float.TryParse(saisieUtilisateur,out valeurRetour) && valeurRetour >= 0;
+                                
+                if (!saisieOk)
+                {
+                        Console.WriteLine("Saisie invalide, recommencez !");
+                }
+                
+            } while (!saisieOk);
+
+            return valeurRetour;
+        }
+
         public static int DemanderNombreEntier(string _question)
         {
             string saisieUtilisateur;
@@ -36,32 +62,6 @@ namespace MBarriquandTools
                 }
 
             } while (!saisieOk); 
-
-            return valeurRetour;
-        }
-
-        public static float DemanderUnFloatPositif(string _questionFloat)
-        {
-            string saisieUtilisateur;
-
-            float valeurRetour;
-
-            bool saisieOk;
-
-            do
-            {
-                Console.WriteLine(_questionFloat);
-                
-                saisieUtilisateur = Console.ReadLine() ?? "";
-
-                saisieOk = float.TryParse(saisieUtilisateur,out valeurRetour) && valeurRetour >= 0;
-                                
-                if (!saisieOk)
-                {
-                        Console.WriteLine("Saisie invalide, recommencez !");
-                }
-                
-            } while (!saisieOk);
 
             return valeurRetour;
         }
