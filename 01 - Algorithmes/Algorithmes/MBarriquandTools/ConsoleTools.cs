@@ -1,4 +1,6 @@
-﻿namespace MBarriquandTools
+﻿using System.Text.RegularExpressions;
+
+namespace MBarriquandTools
 {
     public class ConsoleTools
     {
@@ -64,7 +66,36 @@
             } while (!saisieOk);
 
             return valeurRetour;
-        }
+        } 
+              
+        public static string ComposantCBRegex(string _questionRegex)
+        {
+            string saisieUtilisateur;
+            string RegexCB;
+            bool saisieCBOk;
 
+            RegexCB = (@"^[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{4}");
+
+            do
+            {
+                Console.Write(_questionRegex);
+                saisieUtilisateur = Console.ReadLine() ?? "";
+               if (Regex.IsMatch(saisieUtilisateur, RegexCB))
+                {
+                    Console.WriteLine("Format valide");
+                    saisieCBOk = true;
+                }
+
+               else if (!Regex.IsMatch(saisieUtilisateur, RegexCB))
+                {
+                    Console.WriteLine("Format invalide, recommencez !");
+                    saisieCBOk = false;
+                }
+
+            }
+            while (saisieUtilisateur != RegexCB);
+
+            return RegexCB;
+        }
     }
 }
