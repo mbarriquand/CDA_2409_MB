@@ -14,20 +14,17 @@ namespace MBarriquandTools
 
         }
 
-        public static bool FormatNom(string _nomAVerifier, int _longueurMinAcceptee = 30)
+        public static bool FormatEmail(string _emailAVerifier)
         {
-            Regex rgxPrenom = new Regex(@"^([a-zA-Z\- ]{2,"+_longueurMinAcceptee+"})$");
-            
-            // string rgxPrenom;
-            // rgxPrenom = @"^([a-zA-Z\- ]{2,25})$";
+            string RegexEmail;
+            RegexEmail = @"^([\w\.\-]+){2,64}@([\w\-\.?]+)((\.(\w){2,3})+)$";
 
-            return rgxPrenom.IsMatch(_nomAVerifier);
+            return Regex.IsMatch(_emailAVerifier, RegexEmail);
         }
 
         public static bool FormatMdp(string _mdpAVerifier)
         {
             
-
             bool mdpOk = true;
 
             string regexLettresMinuscules = @"[a-z]{1,}";
@@ -51,7 +48,34 @@ namespace MBarriquandTools
 
         public static bool FormatMdp20Char(string _mdpAVerifier20)
         {
-            // et on continue là
+            bool mdpOk = true;
+
+            string regexLettresMinuscules = @"[a-z]{1,}";
+            string regexLettresMajuscules = @"[A-Z]{1,}";
+            string regexChiffres = @"[0-9]{1,}";
+            string regexCaracteresSpeciaux = @"[^a-zA-Z0-9]+";
+
+            if (!Regex.IsMatch(_mdpAVerifier20, regexLettresMinuscules) ||
+                !Regex.IsMatch(_mdpAVerifier20, regexLettresMajuscules) ||
+                !Regex.IsMatch(_mdpAVerifier20, regexChiffres) ||
+                (!Regex.IsMatch(_mdpAVerifier20, regexCaracteresSpeciaux) ||
+                _mdpAVerifier20.Length <= 20)
+                )
+            {
+                mdpOk = false;
+            }
+
+            return mdpOk;
+        }
+
+        public static bool FormatPrenomOuNom(string _nomAVerifier, int _longueurMinAcceptee = 30)
+        {
+            Regex rgxPrenom = new Regex(@"^([a-zA-Z\- ]{2,"+_longueurMinAcceptee+"})$");
+            
+            // string rgxPrenom;
+            // rgxPrenom = @"^([a-zA-Z\- ]{2,25})$";
+
+            return rgxPrenom.IsMatch(_nomAVerifier);
         }
     }
 }
