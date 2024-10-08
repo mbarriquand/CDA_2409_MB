@@ -30,6 +30,28 @@ namespace MBarriquandTools
             return valeurRetour;
         }
 
+        public static string DemanderEmail(string _questionEmail)
+        {
+            string saisieUtilisateur;
+            bool saisieOk;
+
+            do
+            {
+                Console.WriteLine (_questionEmail);
+
+                saisieUtilisateur = Console.ReadLine() ?? " ";
+
+                saisieOk = RegexTools.FormatEmail(saisieUtilisateur);
+
+                if (!saisieOk) ;
+                {
+                    Console.WriteLine("Saisie invalide, recommencez !");
+                }
+            } while (!saisieOk);
+
+            return saisieUtilisateur;
+        }
+
         public static string DemanderMdP(string _questionMdP)
         {
             string saisieUtilisateur;
@@ -146,7 +168,7 @@ namespace MBarriquandTools
 
                 saisieUtilisateur = Console.ReadLine() ?? " ";
 
-                saisieOk = RegexTools.FormatNom(saisieUtilisateur);
+                saisieOk = RegexTools.FormatPrenomOuNom(saisieUtilisateur);
 
                 if (!saisieOk) ;
                 {

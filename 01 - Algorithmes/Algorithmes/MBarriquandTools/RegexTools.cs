@@ -14,14 +14,12 @@ namespace MBarriquandTools
 
         }
 
-        public static bool FormatNom(string _nomAVerifier, int _longueurMinAcceptee = 30)
+        public static bool FormatEmail(string _emailAVerifier)
         {
-            Regex rgxPrenom = new Regex(@"^([a-zA-Z\- ]{2,"+_longueurMinAcceptee+"})$");
-            
-            // string rgxPrenom;
-            // rgxPrenom = @"^([a-zA-Z\- ]{2,25})$";
+            string RegexEmail;
+            RegexEmail = @"^([\w\.\-]+){2,64}@([\w\-\.?]+)((\.(\w){2,3})+)$";
 
-            return rgxPrenom.IsMatch(_nomAVerifier);
+            return Regex.IsMatch(_emailAVerifier, RegexEmail);
         }
 
         public static bool FormatMdp(string _mdpAVerifier)
@@ -68,6 +66,16 @@ namespace MBarriquandTools
             }
 
             return mdpOk;
+        }
+
+        public static bool FormatPrenomOuNom(string _nomAVerifier, int _longueurMinAcceptee = 30)
+        {
+            Regex rgxPrenom = new Regex(@"^([a-zA-Z\- ]{2,"+_longueurMinAcceptee+"})$");
+            
+            // string rgxPrenom;
+            // rgxPrenom = @"^([a-zA-Z\- ]{2,25})$";
+
+            return rgxPrenom.IsMatch(_nomAVerifier);
         }
     }
 }
