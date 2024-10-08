@@ -27,7 +27,6 @@ namespace MBarriquandTools
         public static bool FormatMdp(string _mdpAVerifier)
         {
             
-
             bool mdpOk = true;
 
             string regexLettresMinuscules = @"[a-z]{1,}";
@@ -51,7 +50,24 @@ namespace MBarriquandTools
 
         public static bool FormatMdp20Char(string _mdpAVerifier20)
         {
-            // et on continue là
+            bool mdpOk = true;
+
+            string regexLettresMinuscules = @"[a-z]{1,}";
+            string regexLettresMajuscules = @"[A-Z]{1,}";
+            string regexChiffres = @"[0-9]{1,}";
+            string regexCaracteresSpeciaux = @"[^a-zA-Z0-9]+";
+
+            if (!Regex.IsMatch(_mdpAVerifier20, regexLettresMinuscules) ||
+                !Regex.IsMatch(_mdpAVerifier20, regexLettresMajuscules) ||
+                !Regex.IsMatch(_mdpAVerifier20, regexChiffres) ||
+                (!Regex.IsMatch(_mdpAVerifier20, regexCaracteresSpeciaux) ||
+                _mdpAVerifier20.Length <= 20)
+                )
+            {
+                mdpOk = false;
+            }
+
+            return mdpOk;
         }
     }
 }

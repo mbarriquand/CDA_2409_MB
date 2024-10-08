@@ -30,6 +30,52 @@ namespace MBarriquandTools
             return valeurRetour;
         }
 
+        public static string DemanderMdP(string _questionMdP)
+        {
+            string saisieUtilisateur;
+            bool saisieOk;
+
+            do
+            {
+                Console.WriteLine(_questionMdP);
+
+                saisieUtilisateur = Console.ReadLine() ?? " ";
+
+                saisieOk = RegexTools.FormatMdp(saisieUtilisateur);
+
+                if (!saisieOk);
+                {
+                    Console.WriteLine("Saisie invalide, recommencez !");
+                }
+            } while (!saisieOk);
+
+            return saisieUtilisateur;
+
+        }
+
+        public static string DemanderMdP20char(string _questionMdP20Char)
+        {
+            string saisieUtilisateur;
+            bool saisieOk;
+
+            do
+            {
+                Console.WriteLine(_questionMdP20Char);
+
+                saisieUtilisateur = Console.ReadLine() ?? " ";
+
+                saisieOk = RegexTools.FormatMdp20Char(saisieUtilisateur);
+
+                if (!saisieOk) ;
+                {
+                    Console.WriteLine("Saisie invalide, recommencez !");
+                }
+            } while (!saisieOk);
+
+            return saisieUtilisateur;
+
+        }
+
         public static int DemanderNombreEntier(string _question)
         {
             string saisieUtilisateur;
