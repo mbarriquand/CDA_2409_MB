@@ -44,7 +44,9 @@ namespace JalonAlgo
             } 
 
             if (!utilisateurExistant)
+            {
             Console.WriteLine("L'utilisateur " + utilisateur + " n'existe pas dans la base.");
+            }
         }
     }
 }
