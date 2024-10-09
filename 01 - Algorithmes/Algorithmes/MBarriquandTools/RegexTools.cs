@@ -17,7 +17,9 @@ namespace MBarriquandTools
         public static bool FormatEmail(string _emailAVerifier)
         {
             string RegexEmail;
-            RegexEmail = @"^([\w\.\-]+){2,64}@([\w\-\.?]+)((\.(\w){2,3})+)$";
+            RegexEmail = @"^(([\w\.\-]+){2,64}@([\w\-\.?]+)((\.(\w){2,3})+){3,320)$";
+
+            //vérifier l'histoire du point après le @
 
             return Regex.IsMatch(_emailAVerifier, RegexEmail);
         }
@@ -48,8 +50,6 @@ namespace MBarriquandTools
 
         public static bool FormatMdp20Char(string _mdpAVerifier20)
         {
-            bool mdpOk = true;
-
             string regexLettresMinuscules = @"[a-z]{1,}";
             string regexLettresMajuscules = @"[A-Z]{1,}";
             string regexChiffres = @"[0-9]{1,}";
@@ -58,24 +58,36 @@ namespace MBarriquandTools
             if (!Regex.IsMatch(_mdpAVerifier20, regexLettresMinuscules) ||
                 !Regex.IsMatch(_mdpAVerifier20, regexLettresMajuscules) ||
                 !Regex.IsMatch(_mdpAVerifier20, regexChiffres) ||
-                (!Regex.IsMatch(_mdpAVerifier20, regexCaracteresSpeciaux) ||
+                (!Regex.IsMatch(_mdpAVerifier20, regexCaracteresSpeciaux) &&
                 _mdpAVerifier20.Length <= 20)
                 )
             {
-                mdpOk = false;
+               return false;
             }
 
-            return mdpOk;
+            return true;
         }
 
-        public static bool FormatPrenomOuNom(string _nomAVerifier, int _longueurMinAcceptee = 30)
+        public static bool FormatPrenomOuNom(string _nomAVerifier, int _longueurMinAcceptee)
         {
-            Regex rgxPrenom = new Regex(@"^([a-zA-Z\- ]{2,"+_longueurMinAcceptee+"})$");
-            
+            Regex rgxPrenom = new Regex(@"^([a-zàâéèëêïîôöùüûçA-Z\- ]{2," + _longueurMinAcceptee + "})$");
+
             // string rgxPrenom;
             // rgxPrenom = @"^([a-zA-Z\- ]{2,25})$";
 
             return rgxPrenom.IsMatch(_nomAVerifier);
         }
+
+        public static bool FormatPrenomOuNom(string _prenomOuNomAVerifier)
+        {
+            return FormatPrenomOuNom(_prenomOuNomAVerifier, 30); // surcharge
+        }
     }
+    // TO DO :
+    
+    // Regex numeroTelephone
+    //[0-79] plage de caractère de 0 à 7 + le 9 (pour le numéro de téléphone)
+
+    // Regex URL
+
 }

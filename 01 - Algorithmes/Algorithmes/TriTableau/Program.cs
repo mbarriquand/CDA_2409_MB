@@ -18,10 +18,14 @@
 
             // VARIABLES
 
+            int stockage;
+            int indice = 0;
             int temp = 0;
             int[] tableau = { 128, 64, 8, 512, 16, 32, 256 };
 
             // TRAITEMENT
+
+            /* affichage du tableau avant le tri */
 
             Console.Write("Soit un tableau : ");
             for (int i = 0; i < tableau.Length; i++)
@@ -29,27 +33,50 @@
                 Console.Write(tableau[i] + " ");
             }
 
+            Console.WriteLine();
+
+            /* tri du tableau */
+
             for (int i = 0; i < tableau.Length; i++)
             {
-                for (int j = 0; j < tableau.Length; j++)
+                stockage = int.MaxValue;
+
+                for (int j = i; j < tableau.Length; j++)
                 {
-                    if (tableau[i] < tableau[j])
+                    if (tableau[j] < stockage)
                     {
-                        temp = tableau[i];
-                        tableau[i] = tableau[j];
-                        tableau[j] = temp;
+                        stockage = tableau[j];
+                        indice = j;
                     }
+                
                 }
+
+                    temp = tableau[indice];
+                    tableau[indice] = tableau[i];
+                    tableau[i] = temp;
             }
 
             // AFFICHAGE
 
-            Console.Write("\nSoit le même tableau trié dans l'ordre croissant : ");
+            Console.Write("Soit le même tableau trié dans l'ordre croissant : ");
 
             for (int i = 0; i < tableau.Length; i++)
             {
                 Console.Write((tableau[i]) + " ");
             }
+
+            Console.WriteLine();
+            Console.Write("Soit le même tableau trié dans l'ordre croissant (mais avec un foreach) : ");
+
+            foreach (int nbr in tableau) // 
+            {
+                Console.Write(nbr + " ");
+            }
+
+            Console.WriteLine();
+
+            Console.WriteLine("Programme terminé, appuyer sur n'importe quelle touche pour quitter.");
+            Console.ReadLine();
         }
     }
 }
