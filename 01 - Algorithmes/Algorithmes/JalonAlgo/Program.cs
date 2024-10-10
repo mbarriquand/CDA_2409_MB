@@ -1,4 +1,4 @@
-﻿using System.ComponentModel.Design;
+using System.ComponentModel.Design;
 
 namespace JalonAlgo
 {
@@ -20,7 +20,7 @@ namespace JalonAlgo
             int[] tableauSolde = { 25, 10, 4, 2, 0 };
 
             // TRAITEMENT
-
+            
             Console.WriteLine("Saisissez le nom de l'utilisateur");
             utilisateur = Console.ReadLine() ?? " ";
             utilisateur = utilisateur.ToUpper() ?? " ";
@@ -52,7 +52,7 @@ namespace JalonAlgo
 
             if (utilisateurExistant && soldeSuffisant)
             {
-                Console.WriteLine("Repas réglé.\t Nouveau solde : " + solde);
+                Console.WriteLine("Repas réglé.\t Nouveau solde : " + solde);                
             }
 
             else if (utilisateurExistant && !soldeSuffisant)
@@ -64,6 +64,6 @@ namespace JalonAlgo
             {
                 Console.WriteLine("L'utilisateur " + utilisateur + " n'existe pas dans la base.");
             }
-        }
+        }        
     }
 }
