@@ -1,4 +1,6 @@
-﻿namespace Collections.Listes
+﻿using System.Collections;
+
+namespace Collections.Listes
 {
     internal class Program
     {
@@ -23,37 +25,57 @@
             4. Le programme se termine
             */
 
+            Console.WriteLine("Enregistrement de nouveaux utilisateurs");
+
             // VARIABLES
 
+            List<string> utilisateurs = new List<string>(); // liste fortement typée
+
+            utilisateurs.Add("toto"); // augmente la taille de la collection de 1 et ajoute l'élément à la fin de la collection
+            utilisateurs.Add("toto2");
+
+            utilisateurs.AddRange(["toto3", "toto4"]);
+
+            utilisateurs.Insert(2, "titi");
+            utilisateurs.InsertRange(1, ["tata", "tutu"]);
+
+            utilisateurs.Prepend("riri"); // ajout au début
+            utilisateurs.Append("fifi"); // ajout à la fin
+
+            utilisateurs.Remove("tata");
+            utilisateurs.RemoveAll(x => x == "tata"); // predicat
+            utilisateurs.RemoveRange(1, 2); 
+
             string saisieNomPrenom;
+
             char saisieOuiNon;
-
-            string[] utilisateurs;
-            utilisateurs = new string[] { "Mary Poppins" };
-
-            string[] tableauTemporaire;
-
+            
             // TRAITEMENT
 
             do
             {
-                Console.WriteLine("\nSaisissez votre nom et prénom : ");
+                Console.WriteLine("\nSaisissez un nom et un prénom : ");
+                
                 saisieNomPrenom = Console.ReadLine() ?? " ";
 
-                tableauTemporaire = utilisateurs;
-
-                utilisateurs = new string[utilisateurs.Length + 1];
-                tableauTemporaire.CopyTo(utilisateurs, 0);
-
-                utilisateurs[utilisateurs.Length-1] = saisieNomPrenom;
+                utilisateurs.Add(saisieNomPrenom);
 
                 Console.WriteLine("\nSaisissez-vous ajouter un autre utilisateur ? (o/n)");
-                saisieOuiNon = Console.ReadKey().KeyChar;
+                saisieOuiNon = Console.ReadKey(true).KeyChar;
                 
             }
             while (saisieOuiNon == 'o' || saisieOuiNon == 'O');
 
+            for (int i = 0; i < utilisateurs.Count; i++)
+            {
+                Console.WriteLine(utilisateurs[i]);
+            }
 
+            foreach (string personne in utilisateurs)
+            {
+                Console.WriteLine(personne);
+            }
+            
         }
     }
 }
