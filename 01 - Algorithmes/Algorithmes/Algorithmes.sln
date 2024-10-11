@@ -49,7 +49,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExercicesRegex", "Verificat
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JalonAlgo", "JalonAlgo\JalonAlgo.csproj", "{4D8D3DF9-275F-48D3-8B43-771F6DDD122E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Collections.Listes", "Collections.Listes\Collections.Listes.csproj", "{59244AC8-0DB3-4EB6-AC4C-BD609A09E695}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Collections.Listes", "Collections.Listes\Collections.Listes.csproj", "{59244AC8-0DB3-4EB6-AC4C-BD609A09E695}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExerciceCollections", "ExerciceCollections\ExerciceCollections.csproj", "{A98C80BE-E5CD-401C-A369-DC0DE05016E7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -153,6 +155,10 @@ Global
 		{59244AC8-0DB3-4EB6-AC4C-BD609A09E695}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{59244AC8-0DB3-4EB6-AC4C-BD609A09E695}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{59244AC8-0DB3-4EB6-AC4C-BD609A09E695}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A98C80BE-E5CD-401C-A369-DC0DE05016E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A98C80BE-E5CD-401C-A369-DC0DE05016E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A98C80BE-E5CD-401C-A369-DC0DE05016E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A98C80BE-E5CD-401C-A369-DC0DE05016E7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
