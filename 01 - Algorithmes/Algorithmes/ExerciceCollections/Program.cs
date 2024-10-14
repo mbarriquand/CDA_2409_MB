@@ -53,16 +53,15 @@ namespace ExerciceCollections
             string ddn = " ";
             int age = 0;
 
-            string metier = " ";
-            string couleur = " ";
+            string infos = " ";
+            // string couleur = " ";
 
             char yn;
 
             List<string> listingUtilisateurs = new List<string>();
             List<int> listingAge = new List<int>();
             List<DateOnly> listingDdn = new List<DateOnly>();
-            List<string> listingMetiers = new List<string>();
-            List<string> listingCouleurs = new List<string>();
+            List<string> listingInfos = new List<string>();
 
             // TRAITEMENT
 
@@ -88,14 +87,14 @@ namespace ExerciceCollections
                         if (age < 18)
                         {
                             Console.WriteLine("Saisissez votre couleur préférée :");
-                            couleur = Console.ReadLine() ?? "";
+                            infos = Console.ReadLine() ?? "";
 
                         }
 
                         else
                         {
                             Console.WriteLine("Saisissez votre métier :");
-                            metier = Console.ReadLine() ?? "";
+                            infos = Console.ReadLine() ?? "";
                         }
 
                     }
@@ -111,10 +110,10 @@ namespace ExerciceCollections
                 listingUtilisateurs.Add(nomUtilisateur);
                 listingAge.Add(age);
                 listingDdn.Add(ddnFormat);
-                listingMetiers.Add(metier);
-                listingCouleurs.Add(couleur);
+                listingInfos.Add(infos);
+                
 
-                Console.WriteLine("Saisissez-vous ajouter un autre utilisateur ? (o/n)");
+                Console.WriteLine("\nSaisissez-vous ajouter un autre utilisateur ? (o/n)");
                 yn = Console.ReadKey(true).KeyChar;
 
             }
@@ -130,16 +129,16 @@ namespace ExerciceCollections
 
                 if (ajd.Year - ddnFormat.Year >= 18)
                 {
-                    Console.Write("Metier :" + listingMetiers[i]);
+                    Console.Write("Metier :" + listingInfos[i]);
                 }
 
                 else 
                 {
-                    Console.Write("Couleur préférée : " + listingCouleurs[i]);
+                    Console.Write("Couleur préférée : " + listingInfos[i]);
                 } 
             }
 
-            Console.WriteLine("\nMerci d'avoir utilisé le programme.");
+            Console.WriteLine("\n\nMerci d'avoir utilisé le programme.");
 
         }
     }
