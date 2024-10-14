@@ -128,14 +128,15 @@ namespace ExerciceCollections
                 Console.Write("\nUtilisateur : " + listingUtilisateurs[i] + "\t");
                 Console.Write("Date de naissance (âge) : " + listingDdn[i] + " (" + listingAge[i] + ")\t");
 
-                if (ajd.Year - ddnFormat.Year < 18)
-                {
-                    Console.Write("Couleur préférée : " + listingCouleurs[i] + "\t");
-                } 
-                else if (ajd.Year - ddnFormat.Year >= 18)
+                if (ajd.Year - ddnFormat.Year >= 18)
                 {
                     Console.Write("Metier :" + listingMetiers[i]);
                 }
+
+                else 
+                {
+                    Console.Write("Couleur préférée : " + listingCouleurs[i]);
+                } 
             }
 
             Console.WriteLine("\nMerci d'avoir utilisé le programme.");
