@@ -78,7 +78,6 @@ namespace ExerciceCollections
                     Console.WriteLine("Saisissez votre date de naissance (jj/mm/aaaa) :");
                     ddn = Console.ReadLine() ?? "";
                     
-
                     try
                     {
                         ddnFormat = DateOnly.Parse(ddn);
@@ -87,16 +86,14 @@ namespace ExerciceCollections
                         if (age < 18)
                         {
                             Console.WriteLine("Saisissez votre couleur préférée :");
-                            infos = Console.ReadLine() ?? "";
-
                         }
 
                         else
                         {
                             Console.WriteLine("Saisissez votre métier :");
-                            infos = Console.ReadLine() ?? "";
                         }
 
+                            infos = Console.ReadLine() ?? "";
                     }
 
                     catch (Exception)
