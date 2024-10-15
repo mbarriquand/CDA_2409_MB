@@ -78,7 +78,6 @@ namespace ExerciceCollections
                     Console.WriteLine("Saisissez votre date de naissance (jj/mm/aaaa) :");
                     ddn = Console.ReadLine() ?? "";
                     
-
                     try
                     {
                         ddnFormat = DateOnly.Parse(ddn);
