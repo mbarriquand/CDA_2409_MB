@@ -56,7 +56,7 @@ namespace ExerciceCollections
             string infos = " ";
             // string couleur = " ";
 
-            char yn;
+            ConsoleKey yn;
 
             List<string> listingUtilisateurs = new List<string>();
             List<int> listingAge = new List<int>();
@@ -69,31 +69,37 @@ namespace ExerciceCollections
 
             do
             {
-                Console.WriteLine("Saisissez votre nom et votre prénom :");
+                Console.WriteLine("Saisissez le nom et le prénom :");
                 nomUtilisateur = Console.ReadLine() ?? "";
 
                 
                 do
                 {
-                    Console.WriteLine("Saisissez votre date de naissance (jj/mm/aaaa) :");
+                    Console.WriteLine("Saisissez la date de naissance (jj/mm/aaaa) :");
                     ddn = Console.ReadLine() ?? "";
-                    
+
                     try
                     {
                         ddnFormat = DateOnly.Parse(ddn);
                         age = ajd.Year - ddnFormat.Year;
 
+                        if (ajd.Month < ddnFormat.Month)
+                        {
+                            age = age - 1;
+                        }
+
                         if (age < 18)
                         {
-                            Console.WriteLine("Saisissez votre couleur préférée :");
+                            Console.WriteLine("Saisissez la couleur préférée :");
                         }
 
                         else
                         {
-                            Console.WriteLine("Saisissez votre métier :");
+                            Console.WriteLine("Saisissez le métier :");
                         }
+                    
 
-                            infos = Console.ReadLine() ?? "";
+                        infos = Console.ReadLine() ?? "";
                     }
 
                     catch (Exception)
@@ -111,11 +117,11 @@ namespace ExerciceCollections
                 
 
                 Console.WriteLine("\nSaisissez-vous ajouter un autre utilisateur ? (o/n)");
-                yn = Console.ReadKey(true).KeyChar;
+                yn = Console.ReadKey(true).Key;
 
             }
 
-            while (yn == 'o' || yn == 'O');
+            while (yn == ConsoleKey.O);
 
             // AFFICHAGE
 
@@ -139,4 +145,10 @@ namespace ExerciceCollections
 
         }
     }
+    // A ajouter pour gérer les anniversaires autour de la date du jour :
+
+             /* int now = int.Parse(DateTime.Now.ToString("yyyyMMdd"));
+                int dob = int.Parse(dateOfBirth.ToString("yyyyMMdd"));
+                int age = (now - dob) / 10000;
+             */
 }
