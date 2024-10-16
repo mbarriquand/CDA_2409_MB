@@ -17,36 +17,77 @@ namespace Collection.Objets
 
         private string? metier;
 
-        private string? couleur;
+        private string? couleurPreferee;
 
-        public Utilisateur()
+        public Utilisateur(string _nomPrenom, string _dateDeNaissance)
         {
+            string[] nomPrenomSepare = _nomPrenom.Split(" ");
+            this.nom = nomPrenomSepare[0];
+            this.prenom = nomPrenomSepare[1];
 
+            if (!DateTime.TryParse(_dateDeNaissance, out dateDeNaissance))
+            {
+                throw new ArgumentException("Date de naissance invalide !");
+            }
+
+            if (dateDeNaissance > DateTime.Now)
+            {
+                throw new ArgumentException("La date doit être dans le passé");
+            }
         }
 
-        public int GetAge()
+        public void SetMetier(string _valeur)
         {
-            throw new System.NotImplementedException();
+            this.metier = _valeur;
         }
 
-        public bool IsMajeur()
+        public void SetCouleur(string _valeur)
         {
-            return false;
-        }
-
-        public string GetMetierOuCouleur()
-        {
-            return "";
-        }
-        public string GetDateDeNaissance()
-
-        {
-            return "";
+            this.couleurPreferee = _valeur;
         }
 
         public string GetNomComplet()
         {
             return prenom + " " + nom;
         }
+               
+        public string GetDateDeNaissance()
+
+        {
+            return dateDeNaissance.ToShortDateString();
+        }
+
+        public int GetAge()
+        {
+            TimeSpan intervalle = DateTime.Now - dateDeNaissance;
+            int age = (int)(intervalle.Days / 362.25);
+            return age;
+        }
+
+        public bool IsMajeur()
+        {
+            return this.GetAge() > 18;
+        }
+
+        public string? GetCouleurOuMetier()
+        {
+            if(metier == null && couleurPreferee == null)
+            {
+                throw new Exception("Le métier ou la couleur préférée" +
+                    "doivent être renseignées !");
+            }
+
+            if (this.IsMajeur()) 
+            {
+                return this.metier;
+            }
+
+            else
+            {
+                return this.couleurPreferee;
+            }
+            //return this.IsMajeur() ? this.metier : this.couleurPreferee;
+        }
+
     }
 }
