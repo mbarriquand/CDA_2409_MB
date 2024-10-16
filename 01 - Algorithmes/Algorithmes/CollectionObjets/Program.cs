@@ -39,14 +39,14 @@ namespace Users.ConsoleApp.Objects
 
                     if (unUtilisateur.IsMajeur())
                     {
-                        Console.WriteLine("Saisissez votre métier : ");
+                        Console.WriteLine("Saisissez le métier : ");
                         metierCouleur = Console.ReadLine() ?? "";
                         unUtilisateur.SetMetier(metierCouleur);
                     }
 
                     else
                     {
-                        Console.WriteLine("Saisissez votre couleur préférée : ");
+                        Console.WriteLine("Saisissez la couleur préférée : ");
                         metierCouleur = Console.ReadLine() ?? "";
                         unUtilisateur.SetCouleur(metierCouleur);
                     }
