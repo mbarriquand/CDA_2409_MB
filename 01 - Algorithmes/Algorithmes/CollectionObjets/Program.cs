@@ -1,6 +1,4 @@
-﻿
-
-using System.Data.Common;
+﻿using System.Data.Common;
 using System.Xml.XPath;
 
 namespace ExerciceCollections
@@ -72,7 +70,7 @@ namespace ExerciceCollections
                 Console.WriteLine("Saisissez le nom et le prénom :");
                 nomUtilisateur = Console.ReadLine() ?? "";
 
-                
+
                 do
                 {
                     Console.WriteLine("Saisissez la date de naissance (jj/mm/aaaa) :");
@@ -97,7 +95,7 @@ namespace ExerciceCollections
                         {
                             Console.WriteLine("Saisissez le métier :");
                         }
-                    
+
 
                         infos = Console.ReadLine() ?? "";
                     }
@@ -114,7 +112,7 @@ namespace ExerciceCollections
                 listingAge.Add(age);
                 listingDdn.Add(ddnFormat);
                 listingInfos.Add(infos);
-                
+
 
                 Console.WriteLine("\nSaisissez-vous ajouter un autre utilisateur ? (o/n)");
                 yn = Console.ReadKey(true).Key;
@@ -135,20 +133,14 @@ namespace ExerciceCollections
                     Console.Write("Metier :" + listingInfos[i]);
                 }
 
-                else 
+                else
                 {
                     Console.Write("Couleur préférée : " + listingInfos[i]);
-                } 
+                }
             }
 
             Console.WriteLine("\n\nMerci d'avoir utilisé le programme.");
 
         }
     }
-    // A ajouter pour gérer les anniversaires autour de la date du jour :
-
-             /* int now = int.Parse(DateTime.Now.ToString("yyyyMMdd"));
-                int dob = int.Parse(dateOfBirth.ToString("yyyyMMdd"));
-                int age = (now - dob) / 10000;
-             */
 }
