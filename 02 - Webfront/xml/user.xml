@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Users>
+    <User id="1">
+        <username>Iron Man</username>
+        <lastname>Stark</lastname>
+        <firstname>Tony</firstname>
+        <birthday format="yyyy-mm-dd">1970-05-29</birthday>
+    </User>
+
+    <User id="2">
+        <username>Black Widow</username>
+        <lastname>Romanoff</lastname>
+        <firstname>Natasha</firstname>
+        <birthday format="yyyy-mm-dd">1984-12-03</birthday>
+    </User>
+
+    <User id="3">
+        <username>The Hulk</username>
+        <lastname>Banner</lastname>
+        <firstname>Bruce</firstname>
+        <birthday format="yyyy-mm-dd">1969-12-18</birthday>
+    </User>
+
+    <User id="4">
+        <username>Captain America</username>
+        <lastname>Rogers</lastname>
+        <firstname>Steve</firstname>
+        <birthday format="yyyy-mm-dd">1917-07-04</birthday>
+    </User>
+
+    <User id="5">
+        <username>Scarlet Witch</username>
+        <lastname>Maximoff</lastname>
+        <firstname>Wanda</firstname>
+        <birthday format="yyyy-mm-dd">1989-02-10</birthday>
+    </User>
+</Users>

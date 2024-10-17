@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<!-- un commentaire -->
+<ListeUtilsateurs>
+	
+	<Utilisateur id="">
+		<id>1</id>
+		<nom>POPPINS</nom>
+		<prenom>Mary</prenom>
+		<dateDeNaissance format="yyyy-mm-dd hh:ii:ss">1990-04-17 21:50:00</dateDeNaissance>
+	
+	</Utilisateur>
+
+	<Utilisateur id="2">
+		<nom>Little</nom>
+		<prenom>Stuart</prenom>
+		<dateDeNaissance format="yyyy-mm-dd hh:ii:ss">2007-04-17 21:50:00</dateDeNaissance>
+	</Utilisateur>
+	
+</ListeUtilsateurs>
