@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StreamingPlatforms>
+    <Netflix>
+        <TopShows>
+            <Show>
+                <Rank>1</Rank>
+                <Title>Squid Game</Title>
+                <DirectedBy>Hwang Dong-hyuk</DirectedBy>
+                <Country>South Korea</Country>
+                <ReleaseDate format="yyyy-mm-dd">2021-09-17</ReleaseDate>
+                <Genre>Survival, Drama, Horror, Science-Fiction, Thriller, Dystopian</Genre>
+                <Rating>15+</Rating>
+                <RottenTomatoesScore>94%</RottenTomatoesScore>
+                <Runtime>9H</Runtime>
+                <Seasons>1</Seasons>
+                <Episodes>9</Episodes>
+                <HoursWatched>1,650.45 millions</HoursWatched>
+                <Status>In production</Status>
+                <Actors>
+                    <Actor>
+                        <Name>Lee Jung-jae</Name>
+                        <Birthday format="yyyy-mm-dd">1972-12-15</Birthday>
+                        <Nationality>South Korean</Nationality>
+                    </Actor>
+                    <Actor>
+                        <Name>HoYeon Jung</Name>
+                        <Birthday format="yyyy-mm-dd">1994-06-23</Birthday>
+                        <Nationality>South Korean</Nationality>
+                    </Actor>
+                </Actors>
+            </Show>
+
+            <Show>
+                <Rank>2</Rank>
+                <Title>Strangers Things</Title>
+                <DirectedBy>The Duffer Brothers</DirectedBy>
+                <Country>USA</Country>
+                <ReleaseDate format="yyyy-mm-dd">2016-07-15</ReleaseDate>
+                <Genre>Mystery, Horror, Science-Fiction, Drama</Genre>
+                <Rating>14+</Rating>
+                <RottenTomatoesScore>97%</RottenTomatoesScore>
+                <Runtime>35H</Runtime>
+                <Seasons>4</Seasons>
+                <Episodes>34</Episodes>
+                <HoursWatched>1,852.09 millions</HoursWatched>
+                <Status>In production</Status>
+                <Actors>
+                    <Actor>
+                        <Name>Winona Ryder</Name>
+                        <Birthday format="yyyy-mm-dd">1971-10-29</Birthday>
+                        <Nationality>American</Nationality>
+                    </Actor>
+                    <Actor>
+                        <Name>David Harbour</Name>
+                        <Birthday format="yyyy-mm-dd">1975-04-10</Birthday>
+                        <Nationality>American</Nationality>
+                    </Actor>
+                    <Actor>
+                        <Name>Millie Bobby Brown</Name>
+                        <Birthday format="yyyy-mm-dd">2004-02-19</Birthday>
+                        <Nationality>British</Nationality>
+                    </Actor>
+                </Actors>
+            </Show>
+            
+            <Show>
+                <Rank>3</Rank>
+                <Title>Wednesday</Title>
+                <DirectedBy>Tim Burton</DirectedBy>
+                <Country>USA</Country>
+                <ReleaseDate format="yyyy-mm-dd">2022-11-23</ReleaseDate>
+                <Genre>Supernatural, Mystery, Coming-of-age</Genre>
+                <Rating>14+</Rating>
+                <RottenTomatoesScore>73%</RottenTomatoesScore>
+                <Runtime>4H</Runtime>
+                <Seasons>1</Seasons>
+                <Episodes>8</Episodes>
+                <HoursWatched>1,237.15 millions</HoursWatched>
+                <Status>In Production</Status>
+                <Actors>
+                    <Actor>
+                        <Name>Jenna Ortega</Name>
+                        <Birthday format="yyyy-mm-dd">2002-09-27</Birthday>
+                        <Nationality>American</Nationality>
+                    </Actor>
+                    <Actor>
+                        <Name>Catherine Zeta-Jones</Name>
+                        <Birthday format="yyyy-mm-dd">1969-09-25</Birthday>
+                        <Nationality>Welsh</Nationality>
+                    </Actor>
+                    <Actor>
+                        <Name>Gwendoline Christie</Name>
+                        <Birthday format="yyyy-mm-dd">1978-10-28</Birthday>
+                        <Nationality>British</Nationality>
+                    </Actor>
+                </Actors>
+            </Show> 
+
+            <Show>
+                <Rank>4</Rank>
+                <Title>Dahmer, Monster: The Jeffrey Dahmer Story</Title>
+                <DirectedBy>Ryan Murphy</DirectedBy>
+                <Country>USA</Country>
+                <ReleaseDate format="yyyy-mm-dd">2022-09-21</ReleaseDate>
+                <Genre>Drama, Thriller</Genre>
+                <Rating>18+</Rating>
+                <RottenTomatoesScore>82%</RottenTomatoesScore>
+                <Runtime>9h</Runtime>
+                <Seasons>1</Seasons>
+                <Episodes>10</Episodes>
+                <HoursWatched></HoursWatched>
+                <Status>Limited Series</Status>
+                <Actors>
+                    <Actor>
+                        <Name>Evan Peters</Name>
+                        <Birthday format="yyyy-mm-dd">1987-01-20</Birthday>
+                        <Nationality>American</Nationality>
+                    </Actor>
+                </Actors>
+            </Show> 
+
+            <Show>
+                <Rank>5</Rank>
+                <Title>Money Heist / La Casa De Papel</Title>
+                <DirectedBy>Álex Pina</DirectedBy>
+                <Country>Spain</Country>
+                <ReleaseDate format="yyyy-mm-dd">2021-12-03</ReleaseDate>
+                <Genre>Thriller, Heist</Genre>
+                <Rating>16+</Rating>
+                <RottenTomatoesScore>71%</RottenTomatoesScore>
+                <Runtime>30H</Runtime>
+                <Seasons>3</Seasons>
+                <Episodes>41</Episodes>
+                <HoursWatched>792.53 millions</HoursWatched>
+                <Status>Finished</Status>
+                <Actors>
+                    <Actor>
+                        <Name>Úrsula Corberó</Name>
+                        <Birthday format="yyyy-mm-dd">1989-08-11</Birthday>
+                        <Nationality>Spanish</Nationality>
+                    </Actor>
+                </Actors>
+            </Show> 
+
+        </TopShows>
+    </Netflix>
+</StreamingPlatforms>
+
+            
