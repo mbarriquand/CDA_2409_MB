@@ -55,9 +55,11 @@ table {
     text-align: center;
 }
 
-tr:nth-child(odd){
+tr:nth-child(even){
     background-color: #316231;
 }
+
+/* si tu t'emmerdes, reviens foutre du flex/wrap ici */
 
   div.gallery img {
     width: 230px;
