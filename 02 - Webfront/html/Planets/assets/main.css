@@ -1,0 +1,18 @@
+body {
+    background-image: url(https://arfp.github.io/tp/web/html-css/img/css-16-bg.webp);
+    margin-top: 150px;
+    text-align: center;
+}
+
+#img1
+{
+    width: 300px;
+}
+
+#img2{
+    width: 400px;
+}
+
+#img3{
+    width: 500px;
+}
