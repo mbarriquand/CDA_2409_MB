@@ -1,0 +1,40 @@
+body {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    margin-top: 20px;
+    background-color: #fff;
+}
+
+table {
+   border-collapse:collapse;
+   margin: 0;
+   padding: 0;
+}
+
+tr, td {
+    margin: 0;
+    padding: 0;
+}
+
+imgb {
+    display:block;
+    content:url(https://arfp.github.io/tp/web/html-css/img/white.png);
+    width: 40px;
+    height: 40px;
+}
+
+imgn {
+    display:block;
+    content:url(https://arfp.github.io/tp/web/html-css/img/black.png);
+    width: 40px;
+    height: 40px;
+}
+
+imgr {
+    display:block;
+    content:url(https://arfp.github.io/tp/web/html-css/img/red.png);
+    width: 40px;
+    height: 40px;
+}
