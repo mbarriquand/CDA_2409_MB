@@ -1,0 +1,53 @@
+body {
+
+    padding: 20px;
+    margin: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+.grayblock {
+    
+    width: 100%;
+    border : 2px solid blue;
+    background-color: gray;
+
+}
+
+.imgcenter {
+    display: flex;
+    justify-content: center;
+}
+
+img {
+    width: 12%;
+    padding : 40px;
+}
+
+h1, h2 {
+    display: block;
+    color: blue;
+    text-transform: uppercase;
+}
+
+p {
+    padding : 10px;
+    font-size: 20px;
+    line-height: 22px;
+}
+
+li {
+    font-size: 20px;
+}
+
+th {
+    padding: 5px;
+    background-color: gray;
+    text-transform: uppercase;
+}
+
+table, th, td {
+    padding: 5px;
+    font-size: 20px;
+    border: 2px solid blue;
+}
