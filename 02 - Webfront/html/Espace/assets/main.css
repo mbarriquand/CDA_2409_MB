@@ -1,0 +1,33 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image:
+    url(https://arfp.github.io/tp/web/html-css/img/snow-black.gif);
+    display: flex;
+    justify-content: space-around;
+    align-items: space-evenly;
+}
+
+#un {    
+    margin-top: 30%;
+    border-radius: 100px;
+    background-color: #fff;
+    width : 100px;
+    height: 100px;
+}
+
+#deux {    
+    margin-top: 15%;
+    border-radius: 100px;
+    background-color: #fff;
+    width : 180px;
+    height: 180px;
+}
+
+#trois {
+    margin-top: 10%;
+    border-radius: 100px;
+    background-color: #fff;
+    width : 70px;
+    height: 70px;
+}
