@@ -57,6 +57,10 @@ p {
     font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 
+hr {
+    margin-left: 40px;
+    margin-right: 40px;
+}
 .underline {
     text-decoration: underline;
     color: #36A23E;
