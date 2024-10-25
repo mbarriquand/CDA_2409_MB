@@ -38,12 +38,21 @@ nav {
 }
 
 h2 {
-    background-color: #303030;
     align-content: center;
     color: #cccccc;
     padding: 10px;
-    height: 50px;
+    margin: 0 0 15px 0;
+    height: 30px;
+    text-wrap: nowrap;
 
+}
+
+nav h2 {
+    background-color: #303030;
+}
+
+.center h2 {
+    background-color: #212121;
 }
 
 .navflex {
@@ -61,23 +70,11 @@ h2 {
 }
 
 .center {
-
+    
     grid-column: 2;
     background-color: #111111;
-    border: 1px solid red;
+    
 }
-
-h3 {
-    display: grid;
-    grid-column: 2/3;
-    align-content: center;
-    background-color: #212121;
-    color: #cccccc;
-    font-size: 25px;
-    height: 50px;
-    padding: 10px;
-}
-
 
 aside {
     grid-column: 3;
@@ -86,6 +83,8 @@ aside {
 .pub {
     display: block;
     background-color: #303030;
+    text-align: center;
+    font-weight: 600;
     color:#18BAE0;
     padding: 10px;
 }
