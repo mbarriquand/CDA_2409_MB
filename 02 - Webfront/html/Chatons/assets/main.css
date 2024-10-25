@@ -14,21 +14,22 @@ header {
     text-align: center;
     padding: 15px;
 }
+
 .textcat {
     margin-top: 50px;
     display: flex;
-    align-items: center;
     justify-content: center;
-    
-    
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: fit-content;
+    margin: auto; 
   }
 
 .catbox {
-    margin-top: 10px;
+    margin: 10px;
     width: 250px;
     /* height: auto; -- le fait automatiquement */
-    margin-left: 10px;
-    margin-right: 10px;
     background-color: #FFFFFF;
     justify-content: flex-end;
     
