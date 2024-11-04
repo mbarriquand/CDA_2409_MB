@@ -1,0 +1,10 @@
+@media (max-width: 700px) {
+
+    .catbox {
+        width: 100%;
+    }
+
+    img {
+        display: none;
+    }
+}
