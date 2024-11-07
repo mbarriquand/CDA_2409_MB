@@ -1,0 +1,78 @@
+* {
+    font-family: "Roboto", sans-serif;
+}
+
+:root {
+    --white: #fff;
+    --teal: #26C1DC;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    width: 99vw;
+    height: 98.2vh;
+    background-image: url(./img/Group\ 5\ \(2\).png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+
+}
+
+.links {
+    display: flex;
+    justify-content: center;
+    height: 54px;
+    margin-top: 23px;
+    gap: 30px;
+
+}
+
+.link {
+    font-family: "Karantina", sans-serif;
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: 400;
+    color: var(--white);
+}
+
+.link2 {
+
+    font-family: "Karantina", sans-serif;
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: 400;
+    color: var(--teal);
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.subtitle {
+    
+    width: 610px;
+    height: 152px;
+    font-size: 101px;
+    font-family: "Karantina", sans-serif;
+    font-weight: 400;
+    color: var(--white);
+    text-transform: uppercase;
+    text-align: right;
+    line-height: 102.21px;
+}
+
+.main-title {
+    
+    width: 828px;
+    height: 96px;
+    font-family: "Karantina", sans-serif;
+    text-transform: uppercase;
+    font-size: 290px;
+    font-weight: 400;
+    color: var(--teal);
+    -webkit-text-stroke-width: 6px;
+    -webkit-text-stroke-color: var(--white)
+    
+}
