@@ -44,35 +44,3 @@ nav {
     color: var(--teal);
 }
 
-.title {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.subtitle {
-    
-    width: 610px;
-    height: 152px;
-    font-size: 101px;
-    font-family: "Karantina", sans-serif;
-    font-weight: 400;
-    color: var(--white);
-    text-transform: uppercase;
-    text-align: right;
-    line-height: 102.21px;
-}
-
-.main-title {
-    
-    width: 828px;
-    height: 96px;
-    font-family: "Karantina", sans-serif;
-    text-transform: uppercase;
-    font-size: 290px;
-    font-weight: 400;
-    color: var(--teal);
-    -webkit-text-stroke-width: 6px;
-    -webkit-text-stroke-color: var(--white)
-    
-}
