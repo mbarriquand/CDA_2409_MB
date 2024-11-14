@@ -1,4 +1,4 @@
-* {   
+* {
     font-family: "Roboto";
 }
 
@@ -18,7 +18,7 @@ h1 {
     margin-left: 50px;
 }
 
-menu {
+nav {
     display: flex;
     justify-content: right;
     align-items: center;
@@ -26,33 +26,47 @@ menu {
     gap: 10px;
     text-transform: uppercase;
     font-weight: 700;
-    font-size: 20px;
+    font-size: 24px;
     margin-right: 5%;
-}
-
-.link1 a {
-    text-decoration: none;
-    color: black;
-}
 
 
-.link1 img {
-    width: 25px;
-    height: 25px;
+    ul {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        height: 150px;
+
+
+        li {
+            list-style: none;
+
+
+            a {
+                text-decoration: none;
+                color: black;
+                
+            }
+
+            .material-symbols-outlined {
+                font-weight: 500;
+                font-size: 20px;
+            }
+
+        }
+
+    }
 }
 
-.link2 {
-    color: #30AAED;
-    font-weight: 600;
-    display: flex;
-    justify-content: center;
-    width: 200px;
+li:nth-child(4) {
+
+    a {
+        color: #30AAED !important;
+    }
 }
 
-.link2 img {
-    width: 28px;
-    height: 28px;
-}
+
+
 
 main {
     display: flex;
@@ -63,17 +77,18 @@ main {
 
     width: 60%;
     margin-top: 40px;
+
     img {
-       width: 80%;
-       margin-left: 10px;
-       
+        width: 80%;
+        margin-left: 10px;
+
     }
 }
 
 .likes {
     width: 35px;
     margin-left: 150px;
-    
+
 }
 
 
@@ -104,8 +119,7 @@ h2 {
     margin-bottom: 20px;
 }
 
-.price
-{
+.price {
     display: flex;
     font-size: 50px;
     font-weight: 700;
@@ -118,18 +132,18 @@ h2 {
 }
 
 .text {
-    color:gray;
+    color: gray;
     font-size: 20px;
     margin-top: 10px;
     margin-bottom: 10px;
 }
 
 .menus {
- display: flex;
- justify-content: space-between;
- width: 100%;
- gap: 10px;
- 
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 10px;
+
 }
 
 .menu-left {
@@ -146,7 +160,7 @@ h2 {
     justify-content: left;
     flex-direction: column;
     width: 100%;
-    
+
     font-size: 20px;
     text-transform: capitalize;
 }
@@ -159,7 +173,7 @@ h3 {
 
 
 
-.scroll-box {    
+.scroll-box {
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -172,7 +186,7 @@ h3 {
         display: block;
         padding: 10px;
     }
-    
+
 }
 
 .scroll-box img {
@@ -214,4 +228,41 @@ h4 {
 p {
     font-size: 16px;
     font-weight: 400;
+}
+
+@media (max-width: 1370px) {
+
+    h1 {
+        text-align: center;
+    }
+
+    nav {
+        display: none;
+    }
+
+    main {
+        display: block;
+        justify-content: center;
+        justify-items: center;        
+    }
+
+    .left
+    {
+        text-align: center;
+        width: 80%;
+        
+    }
+
+    .likes img {
+        display: none;
+    }
+
+
+    h2 {
+        text-align: center;
+    }
+
+    .right {
+        width: 80%;
+    }
 }
