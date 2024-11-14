@@ -45,7 +45,7 @@ nav {
             a {
                 text-decoration: none;
                 color: black;
-                
+
             }
 
             .material-symbols-outlined {
@@ -240,29 +240,30 @@ p {
         display: none;
     }
 
-    main {
-        display: block;
-        justify-content: center;
-        justify-items: center;        
-    }
+}
 
-    .left
-    {
-        text-align: center;
-        width: 80%;
-        
-    }
+main {
+    display: block;
+    justify-content: center;
+    justify-items: center;
+}
 
-    .likes img {
-        display: none;
-    }
+.left {
+    text-align: center;
+    width: 80%;
+
+}
+
+.likes img {
+    display: none;
+}
 
 
-    h2 {
-        text-align: center;
-    }
+h2 {
+    text-align: center;
+}
 
-    .right {
-        width: 80%;
-    }
+.right {
+    width: 80%;
+}
 }
