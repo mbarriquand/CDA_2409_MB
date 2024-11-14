@@ -80,8 +80,7 @@ main {
 
     img {
         width: 80%;
-        margin-left: 10px;
-
+        text-align: center;
     }
 }
 
@@ -90,8 +89,6 @@ main {
     margin-left: 150px;
 
 }
-
-
 
 h2 {
     font-size: 40px;
@@ -171,7 +168,18 @@ h3 {
     height: 12px;
 }
 
+.select-title {
+    margin-bottom: 10px;
+}
 
+
+#select {
+
+    border-radius: 10px;
+    height: 50px;
+    padding: 10px;
+    font-size: 18px;
+}
 
 .scroll-box {
     width: 100%;
@@ -230,17 +238,24 @@ p {
     font-weight: 400;
 }
 
-@media (max-width: 1370px) {
+footer {
+    height: 100px;
+}
 
-    h1 {
-        text-align: center;
+
+@media (max-width: 1400px) {
+
+    header 
+    {
+        display: inline;
     }
+
 
     nav {
         display: none;
     }
 
-}
+
 
 main {
     display: block;
@@ -254,10 +269,6 @@ main {
 
 }
 
-.likes img {
-    display: none;
-}
-
 
 h2 {
     text-align: center;
@@ -266,4 +277,5 @@ h2 {
 .right {
     width: 80%;
 }
+
 }
