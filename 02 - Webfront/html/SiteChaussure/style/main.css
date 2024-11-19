@@ -1,13 +1,15 @@
 * {
     font-family: "Roboto";
+    margin: 0;
+    padding: 0;
 }
 
 header {
     display: flex;
     justify-content: space-around;
-    width: 100%;
+    align-items: center;
+    width: 100vw;
     height: 200px;
-
 }
 
 h1 {
@@ -26,7 +28,7 @@ nav {
     gap: 10px;
     text-transform: uppercase;
     font-weight: 700;
-    font-size: 24px;
+    font-size: 28px;
     margin-right: 5%;
 
 
@@ -47,11 +49,13 @@ nav {
                 color: black;
 
             }
+        
 
             .material-symbols-outlined {
                 font-weight: 500;
-                font-size: 20px;
+                font-size: 25px;
             }
+
 
         }
 
@@ -67,6 +71,9 @@ li:nth-child(4) {
 
 
 
+.hamburger .material-symbols-outlined {
+    display: none;
+}
 
 main {
     display: flex;
@@ -243,39 +250,63 @@ footer {
 }
 
 
-@media (max-width: 1400px) {
+@media (max-width: 1450px) {
 
-    header 
-    {
-        display: inline;
+    ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+        align-items: center;
+        transform: translateY(-550%);
+        transition: 0.3s;
+    }    
+    
+    nav ul li {
+        margin: 25px 0;
+        font-size: 1em;
+        text-align: right;
+    }
+    
+    main {
+        display: block;
+        justify-content: center;
+        justify-items: center;
+    }
+    
+    .left {
+        text-align: center;
+        width: 80%;
+        
+    }    
+    
+    h2 {
+        text-align: center;
+    }
+    
+    .right {
+        width: 80%;
+    }
+    
+    
+    input:checked ~ nav ul {
+        display: flex;
+        transform: translateY(0);
+        
     }
 
-
-    nav {
-        display: none;
+    nav .menu-burger {
+        display: block !important;
     }
-
-
-
-main {
-    display: block;
-    justify-content: center;
-    justify-items: center;
 }
 
-.left {
-    text-align: center;
-    width: 80%;
-
+input {
+    display: none;
 }
 
-
-h2 {
-    text-align: center;
-}
-
-.right {
-    width: 80%;
-}
-
+nav .menu-burger {
+    display: none;
+    height: min-content;
+    margin: 18px -10px 0 0;
+    cursor: pointer;
+    transition: .3s;
 }

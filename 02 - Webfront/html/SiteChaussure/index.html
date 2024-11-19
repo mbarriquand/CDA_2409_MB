@@ -18,10 +18,13 @@
 <body>
 
     <header>
-
+        
+        <input type="checkbox" id="check"/>
         <h1>trenders</h1>
-
         <nav>
+            <label for="check" class="menu-burger">
+                <span class="material-symbols-outlined">menu</span>
+            </label>
             <ul>
                 <li><a href="/">Vêtements</a></li>
                 <li><a href="/">Chaussures</a></li>
@@ -30,7 +33,6 @@
                 <li><a href="/"><span class="material-symbols-outlined">shopping_cart</span></a></li>
                 <li><a href="/"><span class="material-symbols-outlined">account_circle</span></a></li>
             </ul>
-
         </nav>
 
 
@@ -56,27 +58,27 @@
 
             <div class="menus">
                 <div class="menu-left">
-            <label for="select" class="select-title">Taille :</label>
-            <select name="select" id="select">
-                <optgroup label="tailles femme">
-                    <option value="37">37</option>
-                    <option value="38">38</option>
-                    <option value="39">39</option>
-                </optgroup>
-                <optgroup label="tailles homme">
-                    <option value="41">41</option>
-                    <option value="42">42</option>
-                </optgroup>
-            </select>
-            </div>
+                    <label for="select" class="select-title">Taille :</label>
+                    <select name="select" id="select">
+                        <optgroup label="tailles femme">
+                            <option value="37">37</option>
+                            <option value="38">38</option>
+                            <option value="39">39</option>
+                        </optgroup>
+                        <optgroup label="tailles homme">
+                            <option value="41">41</option>
+                            <option value="42">42</option>
+                        </optgroup>
+                    </select>
+                </div>
 
-            <div class="menu-right">
-                <label for="select" class="select-title">Couleur :</label>
-                <select name="select" id="select">
+                <div class="menu-right">
+                    <label for="select" class="select-title">Couleur :</label>
+                    <select name="select" id="select">
                         <option value="Bleu">Bleu</option>
                         <option value="Gris">Gris</option>
                         <option value="Rose">Rose</option>
-                </select>
+                    </select>
                 </div>
 
             </div>
