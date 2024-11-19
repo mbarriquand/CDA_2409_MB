@@ -1,0 +1,135 @@
+
+:root {
+    --caramel: #E9D4C6;
+    --darkbrown: #967A67;
+    --cream: #F9F4F0;
+    --pink: #E88D91;
+    --lightteal: #BEEDEB;
+    --darkteal: #4CA8A5;
+    --darkgrey: #333333;
+    --lightgrey: #BBBBBB;
+
+    --main: 'Open Sans';
+    --accent: 'Playfair Display';
+
+    --bigbuttonradius: 35px;
+    --bigbuttonpadding: 20px 30px;
+}
+
+body {
+    width: 100vw;
+    font-family: var(--main)
+}
+
+header {    
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-bottom: 20px;    
+}
+
+nav {
+    
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    color: #333333;
+    width: 85%;    
+}
+
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50px;
+    font-weight: 500;
+    color: var(--lightgrey);
+    margin-left: 30px;
+}
+
+ul {
+    display: flex;
+    justify-content: space-around;
+    width: 60%;   
+}
+
+li {
+    font-weight: 400;
+}
+
+.container-header {
+
+    display: flex;
+    background-image: url(../img/01\ header.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 40em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+}
+
+.welcome-box {
+
+    width: 598px;
+    height: 401px;
+    background-color: #fff;
+    margin-left: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+
+    button {
+        border-radius: var(--bigbuttonradius);
+        padding: var(--bigbuttonpadding);
+        background-color: #fff;
+        width: 225px;
+        font-size: 20px;
+        margin-top: 30px;
+        margin-left: 20px;
+        font-size: 18px;
+        font-weight:700;
+        font-family: var(--main);
+        text-transform: uppercase;
+    }
+}
+
+.welcome-pretitle {
+    font-size: 16px;
+    letter-spacing: 3px;
+    font-weight: 100;
+    text-transform: uppercase;
+    padding-top: 60px;
+    padding-left: 30px;
+}
+
+h2 {
+    font-size: 60px;
+    font-family: var(--accent);
+    font-weight:700;
+    padding-top: 30px;
+    padding-left: 30px;
+}
+
+.welcome-subtitle {
+    padding-top: 30px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    font-size: 18px;
+    font-family: var(--main);
+
+    a {
+        color: #000;
+    }
+}
+
+
+
+@media (max-width: 1000px){
+
+ul {
+    display: none;
+}
+
+
+}
