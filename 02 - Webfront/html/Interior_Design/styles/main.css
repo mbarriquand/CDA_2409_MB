@@ -1,11 +1,11 @@
-
 :root {
-    --caramel: #E9D4C6;
-    --darkbrown: #967A67;
-    --cream: #F9F4F0;
-    --pink: #E88D91;
+    --medium: #DAC6A5;
+    --dark: #5A4B30;
+    --light: #F9F4F0;
+    --pink: #ec8a8f;
+    --lightpink: #e9a4a8;
     --lightteal: #BEEDEB;
-    --darkteal: #4CA8A5;
+    --teal: #4CA8A5;
     --darkgrey: #333333;
     --lightgrey: #BBBBBB;
 
@@ -17,43 +17,51 @@
 }
 
 body {
-    width: 100vw;
+
     font-family: var(--main)
 }
 
-header {    
+header {
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
-    margin-bottom: 20px;    
+    margin-bottom: 20px;
 }
 
 nav {
-    
+
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    color: #333333;
-    width: 85%;    
+    color: var(--darkgrey);
+    width: 100%;
 }
 
 h1 {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 50px;
     font-weight: 500;
-    color: var(--lightgrey);
+    color: var(--medium);
     margin-left: 30px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--darkgrey);
+}
+
+a:hover {
+    color: var(--medium);
+    text-decoration: underline;
+    text-shadow: var(--dark);
 }
 
 ul {
     display: flex;
     justify-content: space-around;
-    width: 60%;   
+    width: 60%;
 }
 
-li {
-    font-weight: 400;
-}
 
 .container-header {
 
@@ -62,11 +70,12 @@ li {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    min-height: 40em;
+    min-height: 45em;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-   
+
 }
 
 .welcome-box {
@@ -74,12 +83,12 @@ li {
     width: 598px;
     height: 401px;
     background-color: #fff;
-    margin-left: 250px;
+    margin-left: 225px;
     display: flex;
     flex-direction: column;
     align-items: left;
 
-    button {
+    .inspired {
         border-radius: var(--bigbuttonradius);
         padding: var(--bigbuttonpadding);
         background-color: #fff;
@@ -88,9 +97,10 @@ li {
         margin-top: 30px;
         margin-left: 20px;
         font-size: 18px;
-        font-weight:700;
+        font-weight: 700;
         font-family: var(--main);
         text-transform: uppercase;
+        cursor: pointer;
     }
 }
 
@@ -106,7 +116,7 @@ li {
 h2 {
     font-size: 60px;
     font-family: var(--accent);
-    font-weight:700;
+    font-weight: 700;
     padding-top: 30px;
     padding-left: 30px;
 }
@@ -123,13 +133,103 @@ h2 {
     }
 }
 
+.container-subheader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    height: 430px;
 
+    h3 {
+        font-family: var(--accent);
+        font-size: 60px;
+        font-weight: 400;
+    }
 
-@media (max-width: 1000px){
+    p {
+        margin-top: 30px;
+        text-align: center;
+        line-height: 30px;
+        font-size: 18px;
+        width: 60%;
+        font-weight: 400;
 
-ul {
+    }
+
+    .color-button {
+        margin-top: 50px;
+        border-radius: var(--bigbuttonradius);
+        padding: var(--bigbuttonpadding);
+        background-color: var(--medium);
+        color: var(--dark);
+        border: none;
+        font-size: 20px;
+        letter-spacing: 1px;
+        width: 300px;
+        font-weight: 600;
+        cursor: pointer;
+    }
+
+}
+
+.label-hamburger,
+#hamburger {
     display: none;
 }
+
+
+@media (max-width: 1000px) {
+
+    .label-hamburger {
+        display: block;
+        font-size: 40px;
+        color: var(--medium);
+    }
+
+    nav ul {
+        position: absolute;
+        top: -100px;
+        left: 0;
+        transition: 0.5s ease;
+        background-color: var(--light);
+       
+    }    
+    
+    nav li {
+        padding:10px;
+        border-bottom: 1px solid var(--medium);
+    }
+
+    nav a {
+        width: 100%;
+        transition: transform 0.5s;
+    }
+
+    nav a:hover {
+        font-weight: 600;
+    }
+
+    /*checked et ~ : si checked, le sibling suivant fait ce qui est demandé */
+
+    #hamburger:checked ~ ul {
+        display: block;
+        top:90px;
+        left: 0;
+        width: 100%;
+    } 
+
+.container-subheader {
+    margin-top: 10%;
+    height: auto;
+    display: flex;
+    text-align: center;
+
+    
+}
+
+    
+
 
 
 }
