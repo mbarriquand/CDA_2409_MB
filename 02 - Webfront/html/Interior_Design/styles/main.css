@@ -138,6 +138,7 @@ h3 {
     font-family: var(--accent);
     font-size: 60px;
     font-weight: 400;
+    margin: 0 20px;
 }
 
 .container-subheader {
@@ -146,7 +147,7 @@ h3 {
     align-items: center;
     flex-direction: column;
     width: 100vw;
-    height: 430px;
+    height: auto;
 
     p {
         margin-top: 30px;
@@ -159,7 +160,7 @@ h3 {
     }
 
     .color-button {
-        margin-top: 50px;
+        margin-top: 30px;
         border-radius: var(--bigbuttonradius);
         padding: var(--bigbuttonpadding);
         background-color: var(--medium);
@@ -170,6 +171,7 @@ h3 {
         width: 300px;
         font-weight: 600;
         cursor: pointer;
+        margin-bottom: 30px;
     }
 
 }
@@ -183,15 +185,15 @@ h3 {
     display: block;
     justify-content: center;
     width: 100vw;
+    height: auto;
+    padding-bottom: 30px;
     background-color: var(--light);
    
-
 }
 
 h3 {
     text-align: center;
-    padding-top: 40px;
-    margin-bottom: 30px;
+    padding: 40px 0;    
 }
 
 .grid-portfolio {
@@ -238,14 +240,14 @@ h3 {
     display: grid;
     justify-content: center;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(4, 162.5px);
+    grid-template-rows: repeat(4, 163px);
 }
 
 .box-grid-right {
     display: grid;
     justify-content: center;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 130px);
+    grid-template-rows: repeat(2, 131px);
 }
 
 
@@ -286,7 +288,7 @@ h3 {
     height: auto;
 
     h3 {
-        padding: 40px 0;
+        padding: 30px 0;
         text-align: center;
     }
 
@@ -331,8 +333,8 @@ h3 {
     display: block;
     background-color: var(--light);
     width: 100%;
-    margin: 50px 0;
-    padding: 50px 0;
+    height: auto;
+    padding-bottom: 40px;
 
     .gallery-container {
         display: flex;
@@ -450,10 +452,10 @@ h3 {
     .building-text {
         width: 250px;
         text-align: center;
-        padding-top: 10px;
+        padding: 14px 0;
         text-transform: uppercase;
         font-weight: 700;
-        font-size: 16px;
+        font-size: 18px;
         color: var(--dark);
     }
 }
