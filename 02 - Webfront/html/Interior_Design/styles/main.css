@@ -23,10 +23,13 @@ body {
 }
 
 header {
+    position: fixed;
+    width: 100%;
+    height: 80px;
+    background-color: #fff;
     display: flex;
     justify-content: space-between;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    align-items: center;
 }
 
 nav {
@@ -71,7 +74,7 @@ ul {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    min-height: 45em;
+    min-height: 44em;
     width: 100%;
     display: flex;
     align-items: center;
@@ -195,7 +198,7 @@ h3 {
     display: block;
     justify-content: center;
     height: auto;
-    padding-bottom: 30px;
+    padding-bottom: 50px;
     background-color: var(--light);
 
 }
@@ -293,15 +296,17 @@ h4 {
 
 
 .wwd {
-    display: block;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     height: auto;
-    padding-bottom: 50px;
+    margin-top: 100px;
+    margin-bottom: 150px;
+    
 
     h3 {
-        padding: 30px 0;
-        text-align: center;
-    }
+        text-align: center;    }
 
     .wwd-container {
         display: flex;
@@ -338,6 +343,8 @@ h4 {
         font-size: 16px;
     }
 }
+
+
 
 .gallery {
     display: block;
@@ -406,8 +413,9 @@ h4 {
 
     img {
         text-align: center;
-        width: 410px;
-        height: 570px;
+        width: 380px;
+        height: 550px;
+        margin-left: 20px;
     }
 
     button {
@@ -697,7 +705,7 @@ footer {
     }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1250px) {
 
 
     .label-hamburger {
@@ -735,7 +743,7 @@ footer {
 
     #hamburger:checked~ul {
         display: block;
-        top: 90px;
+        top: 80px;
         right: 0;
         width: 100%;
         opacity: 100;
