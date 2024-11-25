@@ -1,0 +1,116 @@
+@media (max-width: 1200px) {
+
+    .content {
+        min-width: 600px;
+        margin-right: 10px;
+    }
+
+    .view {
+        display: block;
+        width: 100%;
+    }
+
+    .sidebar {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 10px;
+        min-height: 0vh;
+        width: 100%;
+    }
+
+    .filters {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .tags {
+        display: none;
+    }
+
+    .filter-icon {
+        display: none;
+    }
+
+    .playlists {
+        display: none;
+    }
+
+    .menu {
+        width: 50%;
+        height: 6rem;
+        margin: 0;
+    }
+
+    .listing {
+        width: 50%;
+    }
+
+
+
+    .like {
+        display: none;
+    }
+
+    .player {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 950px) {
+
+    .menu {
+        min-height: 3rem;
+        width: 100%;
+    }
+
+    .listing {
+        min-height: 3rem;
+        width: 100%;
+    }
+
+    .content-header {
+
+        background-image: url(/img/images.jpg);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: right;
+    }
+
+    h1 {
+        font-size: smaller;
+    }
+
+    .album-img {
+        display: none;
+    }
+
+    .single-info {
+        display: none;
+    }
+
+    .sharing {
+        display: none;
+    }
+
+
+    .system {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+}
+
+@media (max-width: 650px) {
+
+
+    .sidebar {
+        width: 650px;
+    }
+
+    .listing {
+        display: none;
+    }
+}
