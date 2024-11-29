@@ -17,6 +17,11 @@
     --bigbuttonpadding: 20px 30px;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+
 body {
 
     font-family: var(--main);
@@ -79,8 +84,6 @@ ul {
     display: flex;
     align-items: center;
     justify-content: center;
-
-
 }
 
 .welcome-box {
@@ -164,7 +167,6 @@ h3 {
         font-size: 18px;
         width: 60%;
         font-weight: 400;
-
     }
 
     .color-button {
