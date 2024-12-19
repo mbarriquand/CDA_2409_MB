@@ -27,8 +27,13 @@ ORDER BY pub_titre DESC;
 
 SELECT id, nom_utilisateur, email
 FROM utilisateur
-WHERE email like '%.com%'
+WHERE email like '%.com%';
 
--- Sélectionner les publications triées par titre (ordre alphabétique) avec le nom d'utilisateur de l'auteur (nécessite une jointure).
+-- Sélectionner les publications triées par titre (ordre alphabétique) avec le nom d'utilisateur de l'auteur (nécessite une jointure)
 
-SELECT
+SELECT pub_id, pub_date, pub_titre, pub_contenu, nom_utilisateur
+FROM publication
+JOIN utilisateur
+ON publication.pub_id = utilisateur.id
+ORDER BY pub_titre;
+
