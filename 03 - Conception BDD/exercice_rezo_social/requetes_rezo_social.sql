@@ -33,7 +33,6 @@ WHERE email like '%.com%';
 
 SELECT pub_id, pub_date, pub_titre, pub_contenu, nom_utilisateur
 FROM publication
-JOIN utilisateur
-ON publication.pub_id = utilisateur.id
+INNER JOIN utilisateur ON publication.id = utilisateur.id
 ORDER BY pub_titre;
 
