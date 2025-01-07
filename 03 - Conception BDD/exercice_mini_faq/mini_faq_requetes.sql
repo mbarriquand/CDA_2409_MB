@@ -25,7 +25,7 @@ WHERE question_label LIKE "%SQL%"
 ORDER BY question_label DESC;
 
 -- Sélectionner les catégories (nom, description) sans question associée.
-
+-- reprendre ici !!
 SELECT categorie_name, categorie_description
 FROM categories
 
