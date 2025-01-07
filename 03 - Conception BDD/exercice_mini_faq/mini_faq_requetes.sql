@@ -26,15 +26,8 @@ ORDER BY question_label DESC;
 
 -- Sélectionner les catégories (nom, description) sans question associée.
 
-SELECT categorie_name, categorie_description 
-FROM categorie;
-
-SELECT DISTINCT categorie_name
-FROM categories_questions
-WHERE categorie_name IN
-(SELECT categorie_name
-FROM categories);
-
+SELECT categorie_name, categorie_description
+FROM categories
 
 -- Sélectionner les questions triées par titre (ordre alphabétique) avec le nom et prénom de l’auteur (nécessite une jointure).
 
