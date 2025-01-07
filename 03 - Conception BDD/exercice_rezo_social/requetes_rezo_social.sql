@@ -1,4 +1,4 @@
-USE rezo;
+USE rezo_social;
 
 -- Sélectionner tous les utilisateurs (nom d'utilisateur + email).
 

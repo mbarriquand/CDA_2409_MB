@@ -1,6 +1,6 @@
 /* SELECTIONNER LA BASE DE DONNEES A UTILISER */
 
-USE rezo;
+USE rezo_social;
 
 
 INSERT INTO utilisateur
