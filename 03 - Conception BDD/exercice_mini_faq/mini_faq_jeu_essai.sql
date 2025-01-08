@@ -21,9 +21,6 @@ VALUES
 ("NoSQL", "Les questions sur l’approche NoSQL", 4),
 ("PHP", "Les questions relatives à PHP", 1);
 
-
--- reprendre ici !!!! 
-
 INSERT INTO categories_questions
 VALUES
 (1, "Bases de données"),

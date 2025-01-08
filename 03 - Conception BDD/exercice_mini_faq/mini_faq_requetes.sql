@@ -1,14 +1,27 @@
+use mini_faq;
+
+SELECT * FROM users;
+SELECT * FROM categories;
+SELECT * FROM questions;
+SELECT * FROM categories_questions;
+
 -- Sélectionner tous les utilisateurs (identifiant, nom, prénom, email).
 
-SELECT user_id, user_lastname, user_firstname, user_email FROM users;
+SELECT user_id, user_lastname, user_firstname, user_email
+FROM users;
 
--- Sélectionner toutes les questions (date, intitulé, réponse, identifiant utilisateur) triées par date de la plus ancienne à la plus récente.
+-- Sélectionner toutes les questions (date, intitulé, réponse, identifiant utilisateur)
+-- triées par date de la plus ancienne à la plus récente.
 
-SELECT question_date, question_label, question_response, user_id FROM questions ORDER BY question_date ASC;
+SELECT question_date, question_label, question_response, user_id
+FROM questions
+ORDER BY question_date ASC;
 
 -- Sélectionner les questions (identifiant, date, intitulé, réponse) de l’utilisateur n°2.
 
-SELECT question_id, question_date, question_label, question_response FROM questions WHERE user_id = "2";
+SELECT question_id, question_date, question_label, question_response
+FROM questions
+WHERE user_id = "2";
 
 -- Sélectionner les questions (date, intitulé, réponse, identifiant utilisateur) de l’utilisateur Eva Satiti.
 
@@ -16,6 +29,11 @@ SELECT q.question_date, q.question_label, q.question_response, q.user_id /*, u.u
 FROM questions q
 INNER JOIN users u ON q.user_id = u.user_id
 WHERE u.user_lastname = "Satiti" AND u.user_firstname = "Eva";
+
+/* SANS JOINTURE */
+SELECT question_date, question_label, question_response, questions.user_id
+FROM questions, users
+WHERE questions.user_id = users.user_id AND user_lastname = "Satiti" AND user_firstname = "Eva";
 
 -- Sélectionner les questions (identifiant, date, intitulé, réponse, identifiant utilisateur) dont l’intitulé contient “SQL”. Le résultat est trié par le titre et par ordre décroissant.
 
@@ -40,7 +58,7 @@ ORDER BY question_label ASC;
 
 -- Sélectionner les catégories (nom) avec, pour chaque catégorie le nombre de questions associées (nécessite une jointure).
 
-SELECT c.category_name, COUNT(cq.question_id) AS nombre_questions
+SELECT c.category_name AS 'Titre de la catégorie', COUNT(cq.question_id) AS '# de questions'
 FROM categories c
 LEFT JOIN categories_questions cq ON c.category_name = cq.category_name
 GROUP BY c.category_name;
