@@ -39,7 +39,7 @@ WHERE questions.user_id = users.user_id AND user_lastname = "Satiti" AND user_fi
 
 SELECT question_id, question_date, question_label, question_response, user_id
 FROM questions
-WHERE question_label LIKE "%SQL%"
+WHERE UPPER(question_label) LIKE "%sql%"
 ORDER BY question_label DESC;
 
 -- Sélectionner les catégories (nom, description) sans question associée.
