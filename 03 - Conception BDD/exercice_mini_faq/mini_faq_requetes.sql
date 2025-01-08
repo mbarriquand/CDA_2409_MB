@@ -25,10 +25,22 @@ WHERE question_label LIKE "%SQL%"
 ORDER BY question_label DESC;
 
 -- Sélectionner les catégories (nom, description) sans question associée.
--- reprendre ici !!
-SELECT categorie_name, categorie_description
-FROM categories
+
+SELECT c.category_name, c.category_description
+FROM categories c
+LEFT JOIN categories_questions cq ON c.category_name = cq.category_name
+WHERE cq.question_id IS NULL;
 
 -- Sélectionner les questions triées par titre (ordre alphabétique) avec le nom et prénom de l’auteur (nécessite une jointure).
 
+SELECT question_label, question_response, user_lastname, user_firstname
+FROM questions q
+INNER JOIN users u ON q.user_id = u.user_id
+ORDER BY question_label ASC;
+
 -- Sélectionner les catégories (nom) avec, pour chaque catégorie le nombre de questions associées (nécessite une jointure).
+
+SELECT c.category_name, COUNT(cq.question_id) AS nombre_questions
+FROM categories c
+LEFT JOIN categories_questions cq ON c.category_name = cq.category_name
+GROUP BY c.category_name;
