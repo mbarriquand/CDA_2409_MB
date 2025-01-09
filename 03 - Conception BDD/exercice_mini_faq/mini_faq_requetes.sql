@@ -58,7 +58,7 @@ ORDER BY question_label ASC;
 
 -- Sélectionner les catégories (nom) avec, pour chaque catégorie le nombre de questions associées (nécessite une jointure).
 
-SELECT c.category_name AS 'Titre de la catégorie', COUNT(cq.question_id) AS '# de questions'
+SELECT c.category_name AS 'Titre de la catégorie', COUNT(cq.question_id) AS '# de la question'
 FROM categories c
 LEFT JOIN categories_questions cq ON c.category_name = cq.category_name
 GROUP BY c.category_name;
