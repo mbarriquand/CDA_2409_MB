@@ -52,8 +52,7 @@ WHERE cq.question_id IS NULL;
 -- Sélectionner les questions triées par titre (ordre alphabétique) avec le nom et prénom de l’auteur (nécessite une jointure).
 
 SELECT question_label, question_response, user_lastname, user_firstname
-FROM questions q
-INNER JOIN users u ON q.user_id = u.user_id
+FROM questions q JOIN users u ON q.user_id = u.user_id
 ORDER BY question_label ASC;
 
 -- Sélectionner les catégories (nom) avec, pour chaque catégorie le nombre de questions associées (nécessite une jointure).
