@@ -24,3 +24,20 @@ deptno TINYINT NOT NULL);
 ALTER TABLE emp ADD CONSTRAINT fk_dept FOREIGN KEY (deptno) REFERENCES dept(deptno);
 ALTER TABLE emp ADD CONSTRAINT fk_empmgr FOREIGN KEY (mgr) REFERENCES emp(empno);
 
+-- 
+
+CREATE TABLE project (
+pnum SMALLINT AUTO_INCREMENT,
+pname CHAR(5) NOT NULL,
+pbudg DECIMAL(8,2) NOT NULL, CONSTRAINT pk_projet PRIMARY KEY(pnum)
+);
+
+ ALTER TABLE project AUTO_INCREMENT = 101;
+ ALTER TABLE EMP ADD pnum SMALLINT;
+ 
+UPDATE emp SET pnum = 101
+WHERE deptno = 30 AND job = 'salesman';
+
+UPDATE emp SET pnum = 102
+WHERE deptno != 30;
+
