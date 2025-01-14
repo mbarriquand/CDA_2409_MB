@@ -136,3 +136,57 @@ FROM view_employe
 ORDER BY dname ASC, name_proj ASC;
 
 -- 22.Donner le nom du projet associé à chaque manager
+
+SELECT ename, name_proj FROM emp
+JOIN project
+ON project.num_proj = emp.num_proj
+WHERE job = 'manager';
+
+-- Deuxième partie
+-- 1. Afficher la liste des managers des départements 20 et 30
+
+SELECT ename, job, deptno FROM emp
+WHERE job = "manager" AND deptno != 10;
+
+-- 2. Afficher la liste des employés qui ne sont pas manager et qui ont été embauchés en 81
+
+SELECT ename, job, hiredate FROM emp
+WHERE job != 'manager' AND hiredate LIKE '%81%';
+
+-- 3. Afficher la liste des employés ayant une commission
+
+SELECT ename, job, comm FROM emp
+WHERE comm IS NOT NULL AND comm > 0;
+
+-- 4. Afficher la liste des noms, numéros de département, jobs et date d'embauche triés par Numero de Département et JOB les derniers embauches d'abord.
+
+SELECT ename, deptno, job, hiredate FROM emp
+ORDER BY deptno, job, hiredate DESC;
+
+-- 5. Afficher la liste des employés travaillant à DALLAS
+
+SELECT ename, job, loc FROM emp
+INNER JOIN dept
+ON dept.deptno = emp.deptno
+WHERE loc = 'dallas';
+
+-- 6. Afficher les noms et dates d'embauche des employés embauchés avant leur manager, avec le nom et date d'embauche du manager.
+
+
+
+-- 7. Lister les numéros des employés n'ayant pas de subordonné.
+
+SELECT ename, job FROM emp
+WHERE mgr IS NULL;
+
+-- 8. Afficher les noms et dates d'embauche des employés embauchés avant BLAKE.
+
+
+
+-- 9. Afficher les employés embauchés le même jour que FORD.
+
+-- 10. Lister les employés ayant le même manager que CLARK.
+
+-- 11. Lister les employés ayant même job et même manager que TURNER.
+
+-- 12. Lister les employés du département RESEARCH embauchés le même jour que quelqu'un du département SALES.
