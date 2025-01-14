@@ -287,7 +287,7 @@ WHERE e10.hiredate < (
 
 -- 18. Sélectionner le métier où le salaire moyen est le plus faible.
 
-SELECT job, AVG(sal) AS 'salaire moyen'
+SELECT job AS 'intitulé métier', AVG(sal) AS 'salaire moyen'
 FROM emp
 GROUP BY job
 ORDER BY 'salaire moyen' ASC
@@ -295,7 +295,7 @@ LIMIT 1;
 
 -- 19. Sélectionner le département ayant le plus d'employés.
 
-SELECT d.dname, COUNT(e.empno) AS 'nombre d\'employés'
+SELECT d.dname AS 'nom du département', COUNT(e.empno) AS 'nombre d\'employés'
 FROM dept d
 JOIN emp e
 ON e.deptno = d.deptno
