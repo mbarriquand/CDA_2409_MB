@@ -302,3 +302,10 @@ ON e.deptno = d.deptno
 GROUP BY d.dname
 ORDER BY 'nombre d\'employés' DESC
 LIMIT 1;
+
+-- 20. Donner la répartition en pourcentage du nombre d'employés par département selon le modèle ci-dessous
+
+SELECT emp.deptno AS 'Département', 
+       ROUND((COUNT(emp.empno) / (SELECT COUNT(*) FROM emp)) * 100,2) AS 'Répartition en %' 
+FROM emp
+GROUP BY emp.deptno;
