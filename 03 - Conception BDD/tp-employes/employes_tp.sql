@@ -193,7 +193,7 @@ WHERE e.hiredate < m.hiredate;
 
 -- 7. Lister les numéros des employés n'ayant pas de subordonné.
 
-SELECT empno, ename
+SELECT empno, ename, job
 FROM emp
 WHERE empno NOT IN (
     SELECT DISTINCT mgr
@@ -252,6 +252,8 @@ JOIN dept dr ON er.deptno = dr.deptno
 JOIN dept ds ON es.deptno = ds.deptno
 WHERE dr.dname = 'RESEARCH'
 AND ds.dname = 'SALES';
+
+-- possibilité de le faire en sous-requête ^
 
 -- 13. Lister le nom des employés et également le nom du jour de la semaine correspondant à leur date d'embauche.
 

@@ -1,0 +1,35 @@
+DROP DATABASE IF EXISTS avions_vides;
+
+CREATE DATABASE avions_vides;
+
+USE avions_vides;
+
+CREATE TABLE avion
+(
+av INT,
+avmarq VARCHAR(50) NOT NULL,
+avtype VARCHAR(50) NOT NULL,
+cap INT NOT NULL,
+loc VARCHAR(50) NOT NULL,
+CONSTRAINT pk_avion PRIMARY KEY (av)
+ );
+ 
+ CREATE TABLE pilote
+ ( 
+ pil INT,
+ pilnom VARCHAR(50) NOT NULL,
+ adr VARCHAR(255) NOT NULL,
+ CONSTRAINT pk_pilote PRIMARY KEY (pil)
+ );
+
+CREATE TABLE vol
+(
+vol INT,
+vd VARCHAR(50) NOT NULL,
+va VARCHAR(50) NOT NULL,
+hd TIME NOT NULL,
+ha TIME NOT NULL,
+CONSTRAINT pk_vol PRIMARY KEY (vol),
+CONSTRAINT fk_pil_vol FOREIGN KEY (vol) REFERENCES pilote (pil),
+CONSTRAINT fk_pil_av FOREIGN KEY (vol) REFERENCES avion (av)
+);
