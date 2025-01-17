@@ -16,20 +16,22 @@ CONSTRAINT pk_avion PRIMARY KEY (av)
  
  CREATE TABLE pilote
  ( 
- pil INT,
+ pil INT AUTO_INCREMENT,
  pilnom VARCHAR(50) NOT NULL,
- adr VARCHAR(255) NOT NULL,
+ adr VARCHAR(50) NOT NULL,
  CONSTRAINT pk_pilote PRIMARY KEY (pil)
  );
 
 CREATE TABLE vol
 (
-vol INT,
+vol VARCHAR(50),
+pil INT,
+av INT,
 vd VARCHAR(50) NOT NULL,
 va VARCHAR(50) NOT NULL,
-hd TIME NOT NULL,
-ha TIME NOT NULL,
 CONSTRAINT pk_vol PRIMARY KEY (vol),
-CONSTRAINT fk_pil_vol FOREIGN KEY (vol) REFERENCES pilote (pil),
-CONSTRAINT fk_pil_av FOREIGN KEY (vol) REFERENCES avion (av)
+hd INT NOT NULL,
+ha INT NOT NULL,
+CONSTRAINT fk_pil_vol FOREIGN KEY (pil) REFERENCES pilote (pil),
+CONSTRAINT fk_pil_av FOREIGN KEY (av) REFERENCES avion (av)
 );
