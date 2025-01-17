@@ -7,26 +7,41 @@ HAVING vd = 'Paris';
 
 -- 2 Quels sont les pilotes dont le nom commence par "S" ?
 
-SELECT pil 'numéro du pilote', pilnom 'nom du pilote' FROM pilote
+SELECT pil 'Numéro du pilote', pilnom 'Nom du pilote' FROM pilote
 WHERE pilnom LIKE 'S%';
 
 -- 3 Pour chaque ville, donner le nombre et les capacités minimum et maximum des avions qui s'y trouvent.
 
-SELECT loc 'ville', COUNT(av) 'nombre d\'avions', MIN(cap) 'capacité minimum', MAX(cap) 'capacité maximum'
+SELECT loc 'Ville', COUNT(av) 'Nombre d\'avions', MIN(cap) 'Capacité minimum', MAX(cap) 'Capacité maximum'
 FROM avion
 GROUP BY loc;
 
 -- 4 Pour chaque ville, donner la capacité moyenne des avions qui s'y trouvent et cela par type d'avion.
 
-SELECT loc, ROUND(AVG(cap)) 'capacité moyenne', avtype 'type d\'avion'
+SELECT loc 'Ville', ROUND(AVG(cap)) 'Capacité moyenne', avtype 'Type d\'avion'
 FROM avion
 GROUP BY loc, avtype; 
 
 -- 5 Quelle est la capacité moyenne des avions pour chaque ville ayant plus de 1 avion ?
 
+SELECT loc 'Ville', ROUND(AVG(cap)) 'Capacité moyenne', COUNT(av) 'Nombre d\'avions'
+FROM avion
+GROUP BY loc
+HAVING COUNT(av) >= 2;
+
 -- 6 Quels sont les noms des pilotes qui habitent dans la ville de localisation d'un Airbus ?
 
+/* SELECT pilnom 'Nom du pilote', loc 'Ville', avmarq 'Marque de l\'avion'
+FROM pilote 
+JOIN avion ON avion.loc = pilote.adr
+WHERE avion.avmarq = 'AIRBUS';
+
 -- 7 Quels sont les noms des pilotes qui conduisent un Airbus et qui habitent dans la ville de localisation d'un Airbus ?
+
+SELECT pilnom 'Nom du pilote', loc 'Ville', avmarq 'Marque de l\'avion'
+FROM pilote
+JOIN avion ON pilote.adr = avion.loc
+WHERE avion.loc = pilote.adr AND avion.loc = 'AIRBUS'; */
 
 -- 8 Quels sont les noms des pilotes qui conduisent un Airbus ou qui habitent dans la ville de localisation d'un Airbus ?
 
