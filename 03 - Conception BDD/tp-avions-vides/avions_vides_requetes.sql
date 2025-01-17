@@ -1,10 +1,26 @@
 -- 1 Quels sont les vols au départ de Paris entre 12h et 14h ?
 
+SELECT vol 'numéro du vol', vd 'ville de départ', va 'ville d\'arrivée', hd 'heure de départ', ha 'heure d\'arrivée'
+FROM vol
+WHERE hd BETWEEN '12'AND '14'
+HAVING vd = 'Paris';
+
 -- 2 Quels sont les pilotes dont le nom commence par "S" ?
+
+SELECT pil 'numéro du pilote', pilnom 'nom du pilote' FROM pilote
+WHERE pilnom LIKE 'S%';
 
 -- 3 Pour chaque ville, donner le nombre et les capacités minimum et maximum des avions qui s'y trouvent.
 
+SELECT loc 'ville', COUNT(av) 'nombre d\'avions', MIN(cap) 'capacité minimum', MAX(cap) 'capacité maximum'
+FROM avion
+GROUP BY loc;
+
 -- 4 Pour chaque ville, donner la capacité moyenne des avions qui s'y trouvent et cela par type d'avion.
+
+SELECT loc, ROUND(AVG(cap)) 'capacité moyenne', avtype 'type d\'avion'
+FROM avion
+GROUP BY loc, avtype; 
 
 -- 5 Quelle est la capacité moyenne des avions pour chaque ville ayant plus de 1 avion ?
 

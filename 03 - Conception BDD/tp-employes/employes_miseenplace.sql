@@ -52,3 +52,5 @@ VALUES
 
 ALTER TABLE emp 
 ADD CONSTRAINT fk_emp_mgr FOREIGN KEY (mgr) REFERENCES emp (empno);
+
+
