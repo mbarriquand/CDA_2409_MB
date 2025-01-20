@@ -31,14 +31,17 @@ HAVING COUNT(av) >= 2;
 
 -- 6 Quels sont les noms des pilotes qui habitent dans la ville de localisation d'un Airbus ?
 
-/* SELECT pilnom 'Nom du pilote', loc 'Ville', avmarq 'Marque de l\'avion'
-FROM pilote 
-JOIN avion ON avion.loc = pilote.adr
-WHERE avion.avmarq = 'AIRBUS';
+SELECT pilnom
+FROM pilote
+WHERE adr IN (SELECT loc FROM avion WHERE avmarq = 'AIRBUS') AND
+pil IN (SELECT pil FROM vol, avion WHERE avion.av = vol.av AND avmarq = 'AIRBUS');
+SELECT DISTINCT pilnom, adr
+FROM vol, avion, pilote
+WHERE vol.av = avion.av AND pilote.pil = vol.pil AND avmarq = 'AIRBUS' AND adr IN (SELECT loc FROM avion WHERE avmarq = 'AIRBUS');
 
 -- 7 Quels sont les noms des pilotes qui conduisent un Airbus et qui habitent dans la ville de localisation d'un Airbus ?
 
-SELECT pilnom 'Nom du pilote', loc 'Ville', avmarq 'Marque de l\'avion'
+/* SELECT pilnom 'Nom du pilote', loc 'Ville', avmarq 'Marque de l\'avion'
 FROM pilote
 JOIN avion ON pilote.adr = avion.loc
 WHERE avion.loc = pilote.adr AND avion.loc = 'AIRBUS'; */
