@@ -47,7 +47,7 @@
 
 ## 12. Donner le salaire le plus élevé par département
 
-- db.emp.find({},{dname: 1, salaire_max : {$max : "sal"}}) [C'EST PAS CA, FAUT REPRENDRE ICI APRES MANGER]
+db.emp.aggregate({$group: {_id : "$dname", salaire_max : {$max : "$sal"}}})
 
 ## 13. Donner département par département masse salariale, nombre d'employés, salaire moyen par type d'emploi
 
