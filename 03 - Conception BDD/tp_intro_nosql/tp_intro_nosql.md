@@ -51,4 +51,4 @@ db.emp.aggregate({$group: {_id : "$dname", salaire_max : {$max : "$sal"}}})
 
 ## 13. Donner département par département masse salariale, nombre d'employés, salaire moyen par type d'emploi
 
-- 
+- db.emp.aggregate({$group : {_id : "$dname", masse_salariale : {$sum : "$sal"}, total_employes : {$sum : 1}, salaire_moyen : { $avg : "$sal" }}}).sort({_id : 1})
