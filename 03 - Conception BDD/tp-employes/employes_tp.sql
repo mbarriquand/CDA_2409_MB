@@ -193,7 +193,7 @@ WHERE e.hiredate < m.hiredate;
 
 -- 7. Lister les numéros des employés n'ayant pas de subordonné.
 
-SELECT empno, ename
+SELECT empno, ename, job
 FROM emp
 WHERE empno NOT IN (
     SELECT DISTINCT mgr
@@ -253,6 +253,8 @@ JOIN dept ds ON es.deptno = ds.deptno
 WHERE dr.dname = 'RESEARCH'
 AND ds.dname = 'SALES';
 
+-- possibilité de le faire en sous-requête ^
+
 -- 13. Lister le nom des employés et également le nom du jour de la semaine correspondant à leur date d'embauche.
 
 SELECT ename AS 'nom de l\'employé',
@@ -302,3 +304,10 @@ ON e.deptno = d.deptno
 GROUP BY d.dname
 ORDER BY 'nombre d\'employés' DESC
 LIMIT 1;
+
+-- 20. Donner la répartition en pourcentage du nombre d'employés par département selon le modèle ci-dessous
+
+SELECT emp.deptno AS 'Département', 
+       ROUND((COUNT(emp.empno) / (SELECT COUNT(*) FROM emp)) * 100,2) AS 'Répartition en %' 
+FROM emp
+GROUP BY emp.deptno;
