@@ -16,6 +16,11 @@ FROM clients
 JOIN type_clients ON type_clients.type_client_id = clients.type_client_id
 WHERE type_client_libelle = "particulier"; 
 
+SELECT client_ref, client_nom
+FROM clients
+NATURAL JOIN type_clients
+WHERE type_client_libelle = "particulier";
+
 /* 3. Sélectionner l'identifiant, le nom et le type de tous les clients qui ne sont pas des particuliers */
 
 SELECT client_ref AS "Référence client",
@@ -49,7 +54,7 @@ WHERE projet_date_fin_prevue < projet_date_fin_effective;
     JOIN clients ON clients.client_ref = projets.client_ref
     JOIN employes ON employes.emp_matricule = projets.emp_matricule
     JOIN fonctions ON fonctions.fonction_id = employes.fonction_id
-    WHERE fonctions.fonction_nom != "Architecte";
+    WHERE fonctions.fonction_nom = "Architecte";
 
 /* 6. Sélectionner tous les projets (dates, superficies, prix) avec le nombre d'intervenants autres que le client et l'architecte */
 -- A REVOIR !!
@@ -65,14 +70,21 @@ FROM projets
 INNER JOIN participer ON projets.projet_ref = participer.projet_ref
 GROUP BY projets.projet_ref;
 
+SELECT projets.projet_ref, projet_date_depot, projet_superficie_totale, projet_prix, COUNT(participer.emp_matricule)
+FROM projets
+JOIN participer ON projets.projet_ref = participer.projet_ref
+GROUP BY participer.projet_ref
+ORDER BY participer.projet_ref DESC;
+
 /* 7. Sélectionner les types de projets avec, pour chacun d'entre eux, le nombre de projets associés et le prix moyen pratiqué */
 
-SELECT type_projets.type_projet_libelle AS "Libellé type de projet",
-COUNT(*) AS "Nombre de projets",
-ROUND(AVG(projets.projet_prix), 2) AS "Prix moyen"
+SELECT type_projet_libelle AS "Libellé type de projet",
+COUNT(projet_ref) AS "Nombre de projets",
+ROUND(AVG(projet_prix), 2) AS "Prix moyen"
 FROM projets
 JOIN type_projets ON projets.type_projet_id = type_projets.type_projet_id
 GROUP BY type_projets.type_projet_libelle;
+
 
 /* 8. Sélectionner les types de travaux avec, pour chacun d'entre eux, la superficie du projet la pls grande */
 
