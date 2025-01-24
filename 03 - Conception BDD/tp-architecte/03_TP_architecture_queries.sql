@@ -121,3 +121,6 @@ FROM projets
 JOIN clients ON projets.client_ref = clients.client_ref
 JOIN adresses ON adresses.adresse_id = clients.adresse_id
 WHERE projets.adresse_id = clients.adresse_id;
+
+
+
