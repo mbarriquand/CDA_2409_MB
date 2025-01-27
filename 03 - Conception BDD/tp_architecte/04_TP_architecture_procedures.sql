@@ -117,7 +117,7 @@ BEGIN
 END |
 DELIMITER ;
 
--- Insertion test :
+-- Insertion test volontairement erronée :
 
 INSERT INTO projets (projet_ref, projet_date_depot, projet_date_fin_prevue, projet_date_fin_effective,projet_superficie_totale, projet_superficie_batie,
     projet_prix, client_ref, emp_matricule, adresse_id, type_travaux_id, type_projet_id )
