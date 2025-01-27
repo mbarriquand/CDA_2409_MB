@@ -101,10 +101,9 @@ projets.projet_date_depot AS "Date de dépôt",
 projets.projet_date_fin_prevue AS "Date de fin prévue",
 projets.projet_date_fin_effective AS "Date de fin effective",
 projets.projet_prix AS "Prix du projet",
-projets.projet_prix AS "Prix du projet",
 clients.client_nom AS "Nom du client",
 clients.client_telephone AS "Téléphone client",
-adresses.adresse_ville AS "Adresse du client",
+CONCAT(adresses.adresse_code_postal, ' ', adresses.adresse_ville, ' ', adresses.adresse_num_voie, ' ', adresses.adresse_voie) AS "Adresse du client",
 type_travaux.type_travaux_libelle AS "Type de travaux",
 type_projets.type_projet_libelle AS "Type de projet"
 FROM projets
@@ -116,7 +115,8 @@ JOIN type_travaux ON type_travaux.type_travaux_id = projets.type_travaux_id;
 /* 10. Sélectionner les projets dont l'adresse est identique au client associé */
 
 SELECT projets.projet_ref AS "Référence projet",
-clients.client_ref AS "Référence client"
+clients.client_ref AS "Référence du client",
+clients.client_nom AS "Nom du client"
 FROM projets
 JOIN clients ON projets.client_ref = clients.client_ref
 JOIN adresses ON adresses.adresse_id = clients.adresse_id

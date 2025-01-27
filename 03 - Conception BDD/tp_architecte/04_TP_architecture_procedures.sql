@@ -94,3 +94,36 @@ SELECT @cumul_projet_test AS "Résultat intermédiaire";
 CALL ajouterBudgetProj(2, @cumul_projet_test);
 
 SELECT @cumul_projet_test AS "Résultat final";
+
+
+-- Création de la table Erreur
+CREATE TABLE Erreur (
+id TINYINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+erreur VARCHAR(255) UNIQUE);
+
+-- Insertion de l'erreur qui nous intéresse
+INSERT INTO Erreur (erreur) VALUES
+('Erreur : la date de fin doit être postérieure à la date du jour');
+
+DELIMITER | 
+CREATE TRIGGER before_insert_projets BEFORE INSERT ON projets FOR EACH ROW
+BEGIN
+	IF NEW.projet_date_fin_prevue IS NOT NULL
+	AND NEW.projet_date_fin_prevue <= NOW()
+	THEN
+		INSERT INTO Erreur (erreur) VALUES
+		('Erreur : la date de fin doit être postérieure à la date du jour');
+	END IF;
+END |
+DELIMITER ;
+
+-- Insertion test :
+
+INSERT INTO projets (projet_ref, projet_date_depot, projet_date_fin_prevue, projet_date_fin_effective,projet_superficie_totale, projet_superficie_batie,
+    projet_prix, client_ref, emp_matricule, adresse_id, type_travaux_id, type_projet_id )
+VALUES 
+('6', '2022-11-02', '2025-01-24', '2022-09-27', '500', '250', '9999.99', '5', '1', '1', '1', '1');
+
+-- Drop du trigger :
+
+DROP TRIGGER before_insert_projets;
