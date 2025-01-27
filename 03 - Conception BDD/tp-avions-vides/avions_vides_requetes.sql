@@ -41,18 +41,44 @@ WHERE vol.av = avion.av AND pilote.pil = vol.pil AND avmarq = 'AIRBUS' AND adr I
 
 -- 7 Quels sont les noms des pilotes qui conduisent un Airbus et qui habitent dans la ville de localisation d'un Airbus ?
 
-/* SELECT pilnom 'Nom du pilote', loc 'Ville', avmarq 'Marque de l\'avion'
-FROM pilote
-JOIN avion ON pilote.adr = avion.loc
-WHERE avion.loc = pilote.adr AND avion.loc = 'AIRBUS'; */
+SELECT pilnom FROM pilote
+WHERE adr IN (SELECT loc FROM avion WHERE avmarq = "AIRBUS")
+AND pil IN (SELECT pil FROM vol, avion WHERE avion.av = vol.av AND avmarq = "AIRBUS");
+
+SELECT pil FROM vol, avion WHERE avion.av = vol.av AND avmarq = "AIRBUS";
+
+SELECT loc FROM avion WHERE avmarq = "AIRBUS"; 
+
+/* SELECT DISTINCT pilnom, adr FROM vol, avion, pilote
+WHERE vol.av = avion.av AND pilote.pil = vol.pil
+AND avmarq = "AIRBUS" AND adr 
+IN (SELECT loc FROM avion WHERE avmarq = "AIRBUS"); */
 
 -- 8 Quels sont les noms des pilotes qui conduisent un Airbus ou qui habitent dans la ville de localisation d'un Airbus ?
 
+SELECT pilnom FROM pilote
+WHERE adr IN (SELECT loc FROM avion WHERE avmarq = "AIRBUS")
+OR pil IN (SELECT pil FROM vol, avion WHERE avion.av = vol.av AND avmarq = "AIRBUS");
+
 -- 9 Quels sont les noms des pilotes qui conduisent un Airbus sauf ceux qui habitent dans la ville de localisation d'un Airbus ?
+
+SELECT pilnom FROM pilote
+WHERE adr NOT IN (SELECT loc FROM avion WHERE avmarq = "AIRBUS")
+AND pil IN (SELECT pil FROM vol, avion WHERE avion.av = vol.av AND avmarq = "AIRBUS");
+
+-- NOT IN ou != ALL
 
 -- 10 Quels sont les vols ayant un trajet identique ( VD, VA ) à ceux assurés par Serge ?
 
+SELECT vol, pilnom, vd, va FROM vol, pilote
+WHERE vol.pil = pilote.pil
+AND vd IN (SELECT vd FROM vol, pilote WHERE vol.pil = pilote.pil AND pilnom = 'SERGE')
+AND va IN (SELECT va FROM vol, pilote WHERE vol.pil = pilote.pil AND pilnom = 'SERGE') AND pilnom <> 'SERGE';
+
 -- 11 Donner toutes les paires de pilotes habitant la même ville ( sans doublon ).
+
+SELECT p1.pilnom, p2.pilnom FROM pilote p1, pilote p2
+WHERE p1.adr = p2.adr AND p1.pilnom < p2.pilnom;
 
 -- 12 Quels sont les noms des pilotes qui conduisent un avion que conduit aussi le pilote n°1 ?
 
