@@ -95,6 +95,7 @@ CALL ajouterBudgetProj(2, @cumul_projet_test);
 
 SELECT @cumul_projet_test AS "Résultat final";
 
+
 -- Création de la table Erreur
 CREATE TABLE Erreur (
 id TINYINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
