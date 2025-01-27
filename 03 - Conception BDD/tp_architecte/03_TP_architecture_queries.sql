@@ -115,7 +115,8 @@ JOIN type_travaux ON type_travaux.type_travaux_id = projets.type_travaux_id;
 /* 10. Sélectionner les projets dont l'adresse est identique au client associé */
 
 SELECT projets.projet_ref AS "Référence projet",
-clients.client_ref AS "Référence client"
+clients.client_ref AS "Référence du client",
+clients.client_nom AS "Nom du client"
 FROM projets
 JOIN clients ON projets.client_ref = clients.client_ref
 JOIN adresses ON adresses.adresse_id = clients.adresse_id
