@@ -101,10 +101,9 @@ projets.projet_date_depot AS "Date de dépôt",
 projets.projet_date_fin_prevue AS "Date de fin prévue",
 projets.projet_date_fin_effective AS "Date de fin effective",
 projets.projet_prix AS "Prix du projet",
-projets.projet_prix AS "Prix du projet",
 clients.client_nom AS "Nom du client",
 clients.client_telephone AS "Téléphone client",
-adresses.adresse_ville AS "Adresse du client",
+CONCAT(adresses.adresse_code_postal, ' ', adresses.adresse_ville, ' ', adresses.adresse_num_voie, ' ', adresses.adresse_voie) AS "Adresse du client",
 type_travaux.type_travaux_libelle AS "Type de travaux",
 type_projets.type_projet_libelle AS "Type de projet"
 FROM projets
