@@ -22,20 +22,20 @@
 
         /* constructeur personnalisé */
 
-        public Bouteille(float _contenanceMaxEnL,  float _contenuEnL, bool _estOuverte)
+        public Bouteille(float contenanceMaxEnL,  float contenuEnL, bool estOuverte)
         {
-            this.contenanceMaxEnL = _contenanceMaxEnL;
-            this.contenuEnL = _contenuEnL;
-            this.estOuverte = _estOuverte;
+            this.contenanceMaxEnL = contenanceMaxEnL;
+            this.contenuEnL = contenuEnL;
+            this.estOuverte = estOuverte;
         }
 
         /* constructeur de clonage */
 
-        public Bouteille(Bouteille _bouteilleACopier)
+        public Bouteille(Bouteille bouteilleACopier)
         {
-            this.contenanceMaxEnL = _bouteilleACopier.contenanceMaxEnL;
-            this.contenuEnL = _bouteilleACopier.contenuEnL;
-            this.estOuverte = _bouteilleACopier.estOuverte;
+            this.contenanceMaxEnL = bouteilleACopier.contenanceMaxEnL;
+            this.contenuEnL = bouteilleACopier.contenuEnL;
+            this.estOuverte = bouteilleACopier.estOuverte;
         }
 
 
