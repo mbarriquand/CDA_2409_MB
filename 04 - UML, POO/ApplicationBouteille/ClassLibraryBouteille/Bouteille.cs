@@ -40,11 +40,9 @@ namespace ClassLibraryBouteille
 
         public Bouteille(float _contenanceMaxEnL,
                         float _contenuEnL)
+            :this(_contenanceMaxEnL, _contenuEnL, false)
         {
-            contenanceMaxEnL = _contenanceMaxEnL;
-            contenuEnL = _contenuEnL;
-            this.estOuverte = false;
-            
+           
         }
 
         /* constructeur de clonage */
