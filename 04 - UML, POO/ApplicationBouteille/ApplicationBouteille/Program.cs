@@ -1,4 +1,9 @@
-﻿using System.Reflection.Metadata;
+﻿using ClassLibraryBouteille;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace ApplicationBouteille
 {
@@ -6,20 +11,26 @@ namespace ApplicationBouteille
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Application Bouteille");
 
-            // VERIFICATION DES BOUTEILLES
+            // VERIFICATION DES BOUTEILLES 
 
-            Bouteille maBouteille = new Bouteille();
+            Bouteille b;
+            
+            b = new Bouteille();
 
-            Bouteille petiteBouteille = new Bouteille(0.5f, 0.5f, false);
+            b = new Bouteille(3f, 2f, true);
 
-            Bouteille petiteBouteilleClonee = new Bouteille(petiteBouteille);
+            b = new Bouteille(0.5f, 0.25f);
+
+            Bouteille clone = new Bouteille(b);
 
 
-            bool okPourOuvrir = petiteBouteille.Ouvrir();
+            
+           // METHODES
+           
 
-            bool okPourOuvrirBis = petiteBouteille.Ouvrir();
+           // bool okPourOuvrir = b.Ouvrir();
+
 
         }
     }
