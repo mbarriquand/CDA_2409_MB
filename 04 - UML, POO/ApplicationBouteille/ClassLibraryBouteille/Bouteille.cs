@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Metadata.Ecma335;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -40,25 +41,33 @@ namespace ClassLibraryBouteille
 
         public Bouteille(float _contenanceMaxEnL,
                         float _contenuEnL)
-            :this(_contenanceMaxEnL, _contenuEnL, false)
+            : this(_contenanceMaxEnL, _contenuEnL, false)
         {
-           
+
         }
 
         /* constructeur de clonage */
 
 
-        public Bouteille(Bouteille bouteilleACopier)
+         /* public Bouteille(Bouteille bouteilleACopier)
         {
             this.contenanceMaxEnL = bouteilleACopier.contenanceMaxEnL;
             this.contenuEnL = bouteilleACopier.contenuEnL;
             this.estOuverte = bouteilleACopier.estOuverte;
+        } */
+
+        public Bouteille(Bouteille bouteilleACopier)
+            : this(bouteilleACopier.contenanceMaxEnL, bouteilleACopier.contenuEnL, bouteilleACopier.estOuverte)
+        {
+
         }
+
 
 
         // METHODES
 
-        /* public bool Ouvrir()
+
+        public bool Ouvrir()
         {
             bool resultat;
             if (this.estOuverte == true)
@@ -67,9 +76,10 @@ namespace ClassLibraryBouteille
             }
             else
             {
-                this.estOuverte == true;
+                this.estOuverte = true;
                 resultat = true;
             }
+
             return resultat;
         }
 
@@ -82,12 +92,92 @@ namespace ClassLibraryBouteille
             }
             else
             {
-                this.estOuverte == false;
-               resultat = true;
+                this.estOuverte = false;
+                resultat = true;
             }
+
             return resultat;
         }
-        */
 
+        public bool Remplir()
+        {
+            bool resultat;
+            
+            if(this.contenuEnL != this.contenanceMaxEnL && this.estOuverte == true)
+            {
+                resultat = true;
+                this.contenuEnL = this.contenanceMaxEnL;
+            }
+            else
+            {
+                resultat = false;
+            }
+
+            return resultat;
+        }
+
+        public bool Vider()
+        {
+            bool resultat;
+            if (this.contenuEnL == this.contenanceMaxEnL && !this.estOuverte)
+            {
+                resultat = true;
+                this.contenuEnL = 0;
+            }
+            else
+            {
+                resultat = false;
+            }
+
+            return resultat;
+        }
+
+        public bool RemplirPartiellement(float quantiteEnL)
+        {
+            bool resultat;
+            float espaceDispo = this.contenanceMaxEnL - this.contenuEnL;
+
+            if (quantiteEnL < 0)
+                throw new ArgumentOutOfRangeException("quantiteEnL", "La quantité ne peut pas être négative.");
+
+            if (quantiteEnL <= espaceDispo && this.estOuverte == true && this.contenanceMaxEnL > 0f)
+            {
+                resultat = true;
+                this.contenuEnL += quantiteEnL;
+            }
+            else
+            {
+                resultat = false;
+            }
+
+            return resultat;
+        }
+
+        public bool ViderPartiellement(float quantite)
+        {
+            bool resultat;
+            float partiellementVide = this.contenanceMaxEnL - this.contenuEnL;
+
+            if (quantite >= 0)
+            {
+                if (quantite >= partiellementVide && this.estOuverte == true && this.contenanceMaxEnL > 0f)
+                {
+                    resultat = true;
+                    this.contenuEnL -= quantite;
+                }
+                else
+                {
+                    resultat = false;
+                }
+            }
+            else
+            {
+                resultat = false;
+            }
+            return resultat;
+
+
+        }
+        
     }
 }

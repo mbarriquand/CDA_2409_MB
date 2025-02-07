@@ -1,7 +1,9 @@
 ﻿using ClassLibraryBouteille;
+using Microsoft.VisualBasic.FileIO;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Intrinsics.X86;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -12,9 +14,14 @@ namespace ApplicationBouteille
         static void Main(string[] args)
         {
 
+            Console.WriteLine("Bienvenue l'application bouteille");
+            
+
             // VERIFICATION DES BOUTEILLES 
 
             Bouteille b;
+
+            Bouteille bouteilleBis;
             
             b = new Bouteille();
 
@@ -22,16 +29,22 @@ namespace ApplicationBouteille
 
             b = new Bouteille(0.5f, 0.25f);
 
-            Bouteille clone = new Bouteille(b);
+            bouteilleBis = new Bouteille(0.5f, 0.5f, true);
 
+            Bouteille clone = new Bouteille(b);
+            
+            
+           // bool testOuvrir = b.Ouvrir();
+
+           // bool testFermer = b.Fermer();
+
+           // bool testRemplir = b.Remplir();
+           
+           // bool testVider = b.Remplir();
+
+            bool testRemplirPartiellement = bouteilleBis.RemplirPartiellement(-1.6f);
 
             
-           // METHODES
-           
-
-           // bool okPourOuvrir = b.Ouvrir();
-        
-
         }
     }
 }
