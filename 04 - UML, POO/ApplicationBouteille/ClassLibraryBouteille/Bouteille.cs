@@ -62,10 +62,7 @@ namespace ClassLibraryBouteille
 
         }
 
-
-
         // METHODES
-
 
         public bool Ouvrir()
         {
@@ -175,7 +172,6 @@ namespace ClassLibraryBouteille
                 resultat = false;
             }
             return resultat;
-
 
         }
         
