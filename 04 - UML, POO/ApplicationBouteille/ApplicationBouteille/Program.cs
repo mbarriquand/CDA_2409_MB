@@ -13,9 +13,7 @@ namespace ApplicationBouteille
     {
         static void Main(string[] args)
         {
-
-            Console.WriteLine("Bienvenue l'application bouteille");
-            
+                              
 
             // VERIFICATION DES BOUTEILLES 
 
@@ -25,9 +23,9 @@ namespace ApplicationBouteille
             
             b = new Bouteille();
 
-            b = new Bouteille(3f, 2f, true);
+            // b = new Bouteille(3f, 2f, true);
 
-            b = new Bouteille(0.5f, 0.25f);
+            // b = new Bouteille(0.5f, 0.25f);
 
             bouteilleBis = new Bouteille(0.5f, 0.5f, true);
 
@@ -38,9 +36,13 @@ namespace ApplicationBouteille
 
             // bool testFermer = b.Fermer();
 
-            bool testRemplir = bouteilleBis.Remplir();
+            // bool testRemplir = bouteilleBis.Remplir();
 
-            bool testVider = bouteilleBis.Vider();
+            // bool testRemplir2 = b.Remplir();
+
+            // bool testVider = bouteilleBis.Vider();
+
+            Console.WriteLine(b.ToString());
 
             // bool testRemplirPartiellement = bouteilleBis.RemplirPartiellement(-1.6f);
 
