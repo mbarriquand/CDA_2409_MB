@@ -39,10 +39,12 @@ namespace ClassLibraryBouteille
 
         /* alternative hybride entre le classique et le défaut */
 
+        
         public Bouteille(float _contenanceMaxEnL,
                         float _contenuEnL)
             : this(_contenanceMaxEnL, _contenuEnL, false)
         {
+           
 
         }
 
@@ -64,6 +66,18 @@ namespace ClassLibraryBouteille
 
         // METHODES
 
+        /* to string : transformer les paramètres du constructeur en chaîne de caractères */
+
+        public override string ToString()
+        {
+            return base.ToString() + "Contenance Max en L : " + contenanceMaxEnL
+                + ", Contenu en L : " + contenuEnL + ", Est ouverte : " + estOuverte;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         public bool Ouvrir()
         {
             bool resultat;
@@ -80,6 +94,11 @@ namespace ClassLibraryBouteille
             return resultat;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+
         public bool Fermer()
         {
             bool resultat;
@@ -95,6 +114,11 @@ namespace ClassLibraryBouteille
 
             return resultat;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
 
         public bool Remplir()
         {
@@ -116,15 +140,7 @@ namespace ClassLibraryBouteille
         public bool Vider()
         {
             bool resultat;
-            if (this.contenuEnL == this.contenanceMaxEnL && !this.estOuverte)
-            {
-                resultat = true;
-                this.contenuEnL = 0;
-            }
-            else
-            {
-                resultat = false;
-            }
+            resultat = ViderPartiellement(this.contenuEnL);
 
             return resultat;
         }
@@ -150,17 +166,20 @@ namespace ClassLibraryBouteille
             return resultat;
         }
 
-        public bool ViderPartiellement(float quantite)
+        public bool ViderPartiellement(float quantiteEnL)
         {
             bool resultat;
             float partiellementVide = this.contenanceMaxEnL - this.contenuEnL;
 
-            if (quantite >= 0)
+            if (quantiteEnL < 0)
+                throw new ArgumentOutOfRangeException("quantiteEnL", "La quantité ne peut pas être négative.");
+
+            if (quantiteEnL >= 0)
             {
-                if (quantite >= partiellementVide && this.estOuverte == true && this.contenanceMaxEnL > 0f)
+                if (quantiteEnL >= partiellementVide && this.estOuverte == true && this.contenanceMaxEnL > 0f)
                 {
                     resultat = true;
-                    this.contenuEnL -= quantite;
+                    this.contenuEnL -= quantiteEnL;
                 }
                 else
                 {
