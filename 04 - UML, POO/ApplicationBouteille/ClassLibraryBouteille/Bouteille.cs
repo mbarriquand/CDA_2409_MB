@@ -37,26 +37,23 @@ namespace ClassLibraryBouteille
             this.estOuverte = estOuverte;
         }
 
-        /* alternative hybride entre le classique et le défaut */
-
-        
+        /* constructeur par interdépendance */
+                
         public Bouteille(float _contenanceMaxEnL,
                         float _contenuEnL)
             : this(_contenanceMaxEnL, _contenuEnL, false)
         {
            
-
         }
 
         /* constructeur de clonage */
 
-
-         /* public Bouteille(Bouteille bouteilleACopier)
+        public Bouteille(Bouteille bouteilleACopier)
         {
             this.contenanceMaxEnL = bouteilleACopier.contenanceMaxEnL;
             this.contenuEnL = bouteilleACopier.contenuEnL;
             this.estOuverte = bouteilleACopier.estOuverte;
-        } */
+        }
 
         public Bouteille(Bouteille bouteilleACopier)
             : this(bouteilleACopier.contenanceMaxEnL, bouteilleACopier.contenuEnL, bouteilleACopier.estOuverte)
