@@ -1,0 +1,85 @@
+[
+  {
+    "name": "France",
+    "capital": "Paris",
+    "joined": 1958,
+    "population_in_millions": 68.29,
+    "euro": true,
+    "leader": {
+      "title": "President",
+      "lastname": "Macron",
+      "firstname": "Emmanuel",
+      "date_of_birth": "1977-12-21"
+    }
+  },
+
+  {
+    "name": "Germany",
+    "capital": "Berlin",
+    "joined": 1958,
+    "population_in_millions": 83.28,
+    "euro": true,
+    "leader": {
+      "title": "Chancelor",
+      "lastname": "Scholz",
+      "firstname": "Olaf",
+      "date_of_birth": "1958-06-14"
+    }
+  },
+
+  {
+    "name": "Ireland",
+    "capital": "Dublin",
+    "joined": 1973,
+    "population_in_millions": 5.3,
+    "euro": true,
+    "leader": {
+      "title": "Prime Minister",
+      "lastname": "Martin",
+      "firstname": "Micheál",
+      "date_of_birth": "1960-08-01"
+    }
+  },
+
+  {
+    "name": "Bulgaria",
+    "capital": "Sofia",
+    "joined": 2007,
+    "population_in_millions": 6.9,
+    "euro": false,
+    "leader": {
+      "title": "Prime Minister",
+      "lastname": "Radev",
+      "firstname": "Roumen",
+      "date_of_birth": "1963-06-18"
+    }
+  },
+
+  {
+    "name": "Austria",
+    "capital": "Vienna",
+    "joined": 1995,
+    "population_in_millions": 8.9,
+    "euro": true,
+    "leader": {
+      "title": "Federal President",
+      "lastname": "Van der Bellen",
+      "firstname": "Alexander",
+      "date_of_birth": "1944-01-18"
+    }
+  },
+
+  {
+    "name": "Croatia",
+    "capital": "Zagreb",
+    "joined": 2013,
+    "population_in_millions": 4.03,
+    "euro": true,
+    "leader": {
+      "title": "President",
+      "lastname": "Milanović",
+      "firstname": "Zoran",
+      "date_of_birth": "1966-10-30"
+    }
+  }
+]
