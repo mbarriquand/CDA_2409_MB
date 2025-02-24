@@ -1,0 +1,56 @@
+[
+        {
+            "car_id": 342,
+            "car_name": "Mazda RX-7 GS",
+            "car_model": 1980,
+            "car_cylinders": 3,
+            "car_horse_power": 100,
+            "car_weight": 2420,
+            "car_origin": "JP"
+        },
+        {
+            "car_id": 251,
+            "car_name": "Mazda RX-4",
+            "car_model": 1977,
+            "car_cylinders": 3,
+            "car_horse_power": 100,
+            "car_weight": 2720,
+            "car_origin": "JP"
+        },
+        {
+            "car_id": 119,
+            "car_name": "Mazda RX2 Coupe",
+            "car_model": 1972,
+            "car_cylinders": 3,
+            "car_horse_power": 97,
+            "car_weight": 2330,
+            "car_origin": "JP"
+        },
+        {
+            "car_id": 388,
+            "car_name": "Mercury Lynx I",
+            "car_model": 1982,
+            "car_cylinders": 4,
+            "car_horse_power": 70,
+            "car_weight": 2125,
+            "car_origin": "US"
+        },
+        {
+            "car_id": 387,
+            "car_name": "Plymouth Horizon Miser",
+            "car_model": 1982,
+            "car_cylinders": 4,
+            "car_horse_power": 63,
+            "car_weight": 2125,
+            "car_origin": "US"
+        },
+        {
+            "car_id": 404,
+            "car_name": "Dodge Rampage",
+            "car_model": 1982,
+            "car_cylinders": 4,
+            "car_horse_power": 84,
+            "car_weight": 2295,
+            "car_origin": "US"
+        }
+    ]
