@@ -1,41 +1,41 @@
  [
     {
-        "id" : 1,
+        "user_id" : 1,
         "username" : "Iron Man",
         "lastname" : "Stark",
         "firstname" : "Tony",
-        "dob" : "1970-05-29"
+        "date_of_birth" : "1970-05-29"
     },
     
     {
-        "id" : 2,
-        "username" : "Black Widow",
+        "user_id" : 2,
+        "username" : "Black Wuser_idow",
         "lastname" : "Romanov",
         "firstname" : "Natasha",
-        "dob" : "1984-12-03"
+        "date_of_birth" : "1984-12-03"
     },
     
     {
-        "id" : 3,
+        "user_id" : 3,
         "username" : "The Hulk",
         "lastname" : "Banner",
         "firstname" : "Bruce",
-        "dob" : "1969-12-18"
+        "date_of_birth" : "1969-12-18"
     },
     
     {
-        "id" : 4,
+        "user_id" : 4,
         "username" : "Captain America",
         "lastname" : "Rogers",
         "firstname" : "Steve",
-        "dob" : "1917-07-04"
+        "date_of_birth" : "1917-07-04"
     },
     
     {
-        "id" : 5,
+        "user_id" : 5,
         "username" : "Scarlet Witch",
         "lastname" : "Maximoff",
         "firstname" : "Wanda",
-        "dob" : "1989-02-10"
+        "date_of_birth" : "1989-02-10"
     }
     ]

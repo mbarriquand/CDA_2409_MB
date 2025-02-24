@@ -2,50 +2,50 @@
     "bankAccounts" : 
     [
         {
-            "accountNumber" : "FR76 10001 10001 10000000001 11",
-            "bankName" : "Banque Populaire",
+            "account_number" : "FR76 10001 10001 10000000001 11",
+            "bank_name" : "Banque Populaire",
             "city" : "Paris",
-            "accountOwner" : "John Doe",
-            "accountBalance" : 36813.47
+            "account_owner" : "John Doe",
+            "account_balance" : 36813.47
         },
 
         {
-            "accountNumber" : "FR76 30003 30001 30000000012 33",
-            "bankName" : "Crédit Mutuel",
+            "account_number" : "FR76 30003 30001 30000000012 33",
+            "bank_name" : "Crédit Mutuel",
             "city" : "Paris",
-            "accountOwner" : "Mark Zouk",
-            "accountBalance" : 5295.59
+            "account_owner" : "Mark Zouk",
+            "account_balance" : 5295.59
         },
 
         {
-            "accountNumber" : "FR76 30003 30005 30000000001 13",
-            "bankName" : "Crédit Mutuel",
+            "account_number" : "FR76 30003 30005 30000000001 13",
+            "bank_name" : "Crédit Mutuel",
             "city" : "Mulhouse",
-            "accountOwner" : "Joseph Picard",
-            "accountBalance" : 1663.14
+            "account_owner" : "Joseph Picard",
+            "account_balance" : 1663.14
         },
         {
-            "accountNumber" : "FR76 30003 30005 30000000002 23",
-            "bankName" : "Crédit Mutuel",
+            "account_number" : "FR76 30003 30005 30000000002 23",
+            "bank_name" : "Crédit Mutuel",
             "city" : "Mulhouse",
-            "accountOwner" : "Bruce Millice",
-            "accountBalance" : 1559.3
-        },
-
-        {
-            "accountNumber" : "FR76 30003 30005 30000000003 33",
-            "bankName" : "Crédit Mutuel",
-            "city" : "Mulhouse",
-            "accountOwner" : "Steeve Bobs",
-            "accountBalance" : 0.66
+            "account_owner" : "Bruce Millice",
+            "account_balance" : 1559.3
         },
 
         {
-            "accountNumber" : "FR76 30003 30005 30000000004 43",
-            "bankName" : "Crédit Mutuel",
+            "account_number" : "FR76 30003 30005 30000000003 33",
+            "bank_name" : "Crédit Mutuel",
             "city" : "Mulhouse",
-            "accountOwner" : "Bill Bête",
-            "accountBalance" : 1500.344
+            "account_owner" : "Steeve Bobs",
+            "account_balance" : 0.66
+        },
+
+        {
+            "account_number" : "FR76 30003 30005 30000000004 43",
+            "bank_name" : "Crédit Mutuel",
+            "city" : "Mulhouse",
+            "account_owner" : "Bill Bête",
+            "account_balance" : 1500.344
         }
     ]
 }
