@@ -6,15 +6,23 @@ const textUpdate = document.querySelector("#text");
 const ofAgeUpdate = document.querySelector("#ofAge");
 const retraiteUpdate = document.querySelector("#retraite");
 
+/*
+let tabParagrah = document.querySelectorAll("p");
 
+tabParagrah.forEach((element) => {
+    element.style.fontSize = "1.5em";
+    element.style.fontWeight = "bold";
+    element.style.color = "blue";
+});
+/*
 
 /* console.log(btnAdd);
 console.log(inputName); */
 
-btnAdd.addEventListener("click", () => {
+btnAdd.addEventListener("click", function() {
 
 if (inputName.value.length < 1) {
-    textUpdate.innerHTML = "Veuillez saisir un nom valide.";
+    textUpdate.innerHTML = "<i>Veuillez saisir un nom valide.</i>";
 }
 
 else if (inputAge.value <= 0 || inputAge.value === "") {
@@ -22,11 +30,11 @@ else if (inputAge.value <= 0 || inputAge.value === "") {
 }
 
 else {
-    textUpdate.innerHTML = "Bonjour " + inputName.value +
-     ", vous avez " + inputAge.value + " ans.";
+    textUpdate.innerHTML = "Bonjour <span class='rouge'>" + inputName.value +
+     "</span>, vous avez <span class='rouge'>" + inputAge.value + "</span> ans.";
 
     if (inputAge.value < 18) {
-        ofAgeUpdate.innerHTML += " Vous êtes mineur(e).";
+        ofAgeUpdate.innerHTML += " Vous êtes <span class='rouge'>mineur(e)</span>.";
     }
 
     else {

@@ -7,6 +7,10 @@ body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+.rouge {
+    color: red;
+}
+
 .nameBlue {
     color: blue;
 }
