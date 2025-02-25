@@ -1,0 +1,41 @@
+body {
+    margin : 20px;
+    padding: 20px;
+    border: 2px solid black;
+    width: 800px;
+    height: 300px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.nameBlue {
+    color: blue;
+}
+
+h1 {
+    text-transform: uppercase;
+}
+
+label {
+    text-transform: uppercase;
+}
+
+input { 
+    border: 1px solid blue;
+}
+
+hr {
+    margin-top: 20px;
+    border: 1px solid black;
+}
+
+button {
+   font-size: 18spx; 
+   text-transform: uppercase;
+   border: 1px solid blue;
+   color : blue;   
+}
+
+p {
+    font-size: 1.2em;
+    font-weight: bold;
+}

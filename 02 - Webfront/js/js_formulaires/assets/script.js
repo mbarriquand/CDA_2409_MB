@@ -6,6 +6,8 @@ const textUpdate = document.querySelector("#text");
 const ofAgeUpdate = document.querySelector("#ofAge");
 const retraiteUpdate = document.querySelector("#retraite");
 
+
+
 /* console.log(btnAdd);
 console.log(inputName); */
 
@@ -24,7 +26,7 @@ else {
      ", vous avez " + inputAge.value + " ans.";
 
     if (inputAge.value < 18) {
-        ofAgeUpdate.innerHTML += " Vous êtes mineur.";
+        ofAgeUpdate.innerHTML += " Vous êtes mineur(e).";
     }
 
     else {
