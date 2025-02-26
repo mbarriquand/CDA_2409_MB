@@ -1,0 +1,25 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border: 1px solid black;
+    padding: 20px;
+    margin: 20px;
+    width: 700px;
+    height: 500px;
+}
+
+h1 {
+    text-transform: uppercase;
+}
+
+label {
+    text-transform: uppercase;
+}
+
+input {
+    font-size: 16px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+button {
+    font-size : 16px;
+}
