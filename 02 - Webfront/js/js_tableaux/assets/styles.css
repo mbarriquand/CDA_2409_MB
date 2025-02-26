@@ -1,0 +1,16 @@
+body {
+    background-color: #536B78;
+}
+
+.container {
+    margin : 20px;
+    padding : 20px;	
+    border: 1px solid #ACCBE1;
+    color : #ACCBE1;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 80%;
+}
+
+li {
+    font-weight: 500;
+}
