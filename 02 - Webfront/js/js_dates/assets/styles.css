@@ -1,0 +1,45 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+fieldset {
+    border: 1px solid grey;
+    background-color: #eee;
+    border-radius: 12px;
+    padding: 10px;
+    margin: 10px;
+    width: 30%;
+    box-shadow: 2px 2px 8px grey;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+}
+
+legend {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1.6em;
+
+}
+
+.group {
+    margin: 10px;
+}
+
+
+h1 {
+    text-transform: uppercase;
+}
+
+label {
+    text-transform: uppercase;
+}
+
+input {
+    font-size: 16px;
+    
+}
+
+button {
+    font-size : 16px;
+}
