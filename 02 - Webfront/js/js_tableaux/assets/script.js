@@ -28,7 +28,7 @@ monTab.setAttribute("style", "background-color: #637081; margin: 10px 10px");
 
 function addCellTitle(row, text){
 let myCell = document.createElement("th");
-myCell.setAttribute("style", "border: 1px solid #ACCBE1; padding:20px;");
+myCell.setAttribute("style", "border: 1px solid #ACCBE1; padding:20px; font-family:verdana; text-transform: uppercase;");
 myCell.textContent = text;
 row.appendChild(myCell);
 }
@@ -40,7 +40,7 @@ function addCell(row, text){
   
   }
 
-  const titleArray = ["Nom", "Prenom", "Email"];
+  const titleArray = ["Nom", "Prenom", "Email", "Supprimer"];
 
   let header = monTab.createTHead();
   let myRow = header.insertRow();
@@ -51,7 +51,6 @@ function addCell(row, text){
 
   let myBody = monTab.createTBody();
 
-
   
   for(let i= 0; i < people.length; i++){
     let myRowBody = myBody.insertRow();
@@ -60,6 +59,7 @@ function addCell(row, text){
     addCell(myRowBody, tabLocal[1]);
     addCell(myRowBody, tabLocal[0]);
     let chaineEmail = `${tabLocal[0]}.${tabLocal[1]}@example.com`.toLowerCase();
-
     addCell(myRowBody, chaineEmail);
+    addCell(myRowBody, 'x')
   }
+
