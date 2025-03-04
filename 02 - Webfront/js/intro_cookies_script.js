@@ -16,4 +16,4 @@ CreerCookies("Nom", user);
 
 window.location.assign("./intro_cookies_destination.html");
 
-})
+});
