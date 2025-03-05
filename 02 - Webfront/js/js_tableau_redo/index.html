@@ -11,15 +11,20 @@
     <div class="container">
       <h1>Liste des personnes inscrites</h1>
 
-      
-      
-      <ul id="listInscrits">
+      <fieldset id="formulaireInscription">
+        <legend>Ajouter Une Personne</legend>
+        <label id="lblPrenom" for="txtPrenom">Prénom :</label>
+        <input type="text" id="txtPrenom" name="txtPrenom" maxlength="20">
+        <label id="lblNom" for="txtNom">Nom :</label>
+        <input type="text" id="txtNom" name="txtNom" maxlength="20">
+        <input type="button" id="btnInscription" value="Ajouter">
+        <p id="validationAjout"></p>
+
+      </fieldset>
+      <ul id="listeInscrits">
 
       </ul>
       
-      <table id="tableauInscrits">
-
-      </table>
     </div>
   </body>
 </html>
