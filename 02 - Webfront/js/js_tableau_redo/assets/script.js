@@ -73,8 +73,9 @@ const nom = document.querySelector("#txtNom");
 monBouton.addEventListener('click', function(){
 
     let chaineInscription = prenom.value + " " + nom.value;
-    utilisateurs.unshift(chaineInscription);
+    utilisateurs.push(chaineInscription);
     document.querySelector("table").remove();
     genererTableau();
 });
+
 
