@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/style.css" />
+    <script src="./assets/script.js" async></script>
+    <title>Manipulation de tableau</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Liste des personnes inscrites</h1>
+
+      <fieldset id="formulaireInscription">
+        <legend>Ajouter Une Personne</legend>
+        <label id="lblPrenom" for="txtPrenom">Prénom :</label>
+        <input type="text" id="txtPrenom" name="txtPrenom" maxlength="20">
+        <label id="lblNom" for="txtNom">Nom :</label>
+        <input type="text" id="txtNom" name="txtNom" maxlength="20">
+        <input type="button" id="btnInscription" value="Ajouter">
+        <p id="validationAjout"></p>
+
+      </fieldset>
+      <ul id="listeInscrits">
+
+      </ul>
+      
+    </div>
+  </body>
+</html>
