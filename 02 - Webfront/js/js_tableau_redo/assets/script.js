@@ -77,3 +77,4 @@ monBouton.addEventListener('click', function(){
     document.querySelector("table").remove();
     genererTableau();
 });
+
