@@ -1,4 +1,4 @@
-const people = ['Mike Dev', 'John Makenzie', 'Léa Grande'];
+const utilisateurs = ['Mike Dev', 'John Makenzie', 'Léa Grande'];
 
 const liste = document.querySelector("#inscrit");
 const monTab = document.querySelector("#monTableau");
@@ -13,11 +13,11 @@ document.querySelector("#filet").setAttribute("style", "border:2px solid   #ACCB
 monTab.setAttribute("style", "background-color: #637081");
 
 
-for (let i = 0; i < people.length; i++) {
+for (let i = 0; i < utilisateurs.length; i++) {
    
     let monItem= document.createElement("li");
     monItem.setAttribute("style", "font-family:tahoma; font-size:1.6rem");
-    monItem.textContent=people[i];
+    monItem.textContent=utilisateurs[i];
     liste.appendChild(monItem);
     
 }
@@ -52,9 +52,9 @@ function addCell(row, text){
   let myBody = monTab.createTBody();
 
   
-  for(let i= 0; i < people.length; i++){
+  for(let i= 0; i < utilisateurs.length; i++){
     let myRowBody = myBody.insertRow();
-    let tabLocal = people[i].split(' ');
+    let tabLocal = utilisateurs[i].split(' ');
     
     addCell(myRowBody, tabLocal[1]);
     addCell(myRowBody, tabLocal[0]);
