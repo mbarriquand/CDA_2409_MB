@@ -21,7 +21,13 @@ function genererListeUtilisateurs() {
   // ajout d'une ligne à la liste pour chaque occurence dans l'array utilisateurs
   for (let i = 0; i < utilisateurs.length; i++) {
     const monLi = document.createElement("li"); // création des éléments 'li' dans l'élément 'ul'
-    monLi.textContent = utilisateurs[i];
+    let prenom = utilisateurs[i].split(" ")[0];
+    let nom = utilisateurs[i].split(" ")[1];
+
+    let prenomMaj = prenom[0].toUpperCase() + prenom.slice(1);
+    let nomMaj = nom[0].toUpperCase() + nom.slice(1);
+
+    monLi.textContent = `${prenomMaj} ${nomMaj}`;
     maListe.appendChild(monLi);
   }
 }
@@ -87,12 +93,14 @@ function genererTableau() {
     const nouvelleLigneBody = monBody.insertRow();
     let prenom = utilisateurs[i].split(" ")[0]; // on prend l'objet de l'array et on le divise
     let nom = utilisateurs[i].split(" ")[1]; // avant et après le " "
+    let prenomMaj = prenom[0].toUpperCase() + prenom.slice(1);
+    let nomMaj = nom[0].toUpperCase() + nom.slice(1);
     let prenomNormalise = normaliserChaine(prenom);
     let nomNormalise = normaliserChaine(nom);
     let email = `${prenomNormalise}.${nomNormalise}@example.com`; // concaténation pour reconstruire une adresse mail
     let supprimer = "x"; // futur """bouton""" pour supprimer les lignes
-    creerCellule(nom, nouvelleLigneBody, i); // Passage de l'indice i
-    creerCellule(prenom, nouvelleLigneBody, i); // Passage de l'indice i
+    creerCellule(nomMaj, nouvelleLigneBody, i); // Passage de l'indice i
+    creerCellule(prenomMaj, nouvelleLigneBody, i); // Passage de l'indice i
     creerCellule(email, nouvelleLigneBody, i); // Passage de l'indice i
     let sup = creerCellule(supprimer, nouvelleLigneBody, i); // Passage de l'indice i
     sup.setAttribute("style", "text-align:center");
@@ -115,9 +123,11 @@ const nom = document.querySelector("#txtNom");
 monBouton.addEventListener("click", function () {
   let chaineInscription = prenom.value + " " + nom.value;
   // ajout à la fin de la liste
+
   utilisateurs.push(chaineInscription);
   // affichage du paragraphe formulaire
-  ajout.textContent = `L'utilisateur ${prenom.value} ${nom.value} a été ajouté(e).`;
+  
+  ajout.innerHTML = `L'utilisateur <span id="maj">${prenom.value} ${nom.value}</span> a été ajouté(e).`;
   // suppression du tableau existant
   document.querySelector("table").remove();
   // nouvelle génération des listes MAJ

@@ -66,3 +66,7 @@ h2 {
     cursor: pointer;
   }
 
+#maj {
+    text-transform: capitalize;
+  }
+
