@@ -58,7 +58,7 @@ function genererTableau() {
     }
   
     return maCellule;
-  }
+  }  
 
   function normaliserChaine(chaine) {
       return chaine
