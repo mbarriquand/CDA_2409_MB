@@ -2,12 +2,21 @@ body {
     background-color: #536B78;
     color: #ACCBE1;
     font-family: Arial, Helvetica, sans-serif;
+    width: auto;
+    margin: 30px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 2px #353c45;
 }
 
 #listeInscrits {
     list-style: none;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
+    text-shadow: 2px 2px 2px #353c45;
 }
+
 
 table, th, td {
     border: 1px solid #ACCBE1;
@@ -15,4 +24,49 @@ table, th, td {
     padding: 10px;
     background-color: #637081;
 }
+
+form {
+    padding: 5px 20px;
+    border: 1px solid #ACCBE1;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px #353c45;
+}
+
+h2 {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 2px #353c45;
+    
+}
+
+#lblPrenom, #lblNom {
+    text-transform: uppercase;
+    font-weight: 600;
+    text-shadow: 2px 2px 2px #353c45;
+}
+
+#txtPrenom, #txtNom {
+    padding: 5px;
+    border-radius: 5px;
+}
+
+#btnInscription {
+    font-size: 14px;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+#validationAjout {
+    font-size: 1.5rem;
+    text-shadow: 2px 2px 2px #353c45;
+    font-style: italic;
+}
+
+.supprimer-cellule {
+    cursor: pointer;
+  }
+
+#maj {
+    text-transform: capitalize;
+  }
 

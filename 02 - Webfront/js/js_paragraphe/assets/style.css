@@ -1,0 +1,20 @@
+body {
+    display: block;
+    margin: auto;
+    width: 70%;
+    height: 70%;
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    text-transform: uppercase;
+}
+
+#augmenter, #diminuer {
+    font-size: 1.6rem;
+}

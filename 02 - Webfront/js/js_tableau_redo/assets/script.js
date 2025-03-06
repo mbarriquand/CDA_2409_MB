@@ -1,81 +1,138 @@
+// variable pour déclarer le tableau de base
 const utilisateurs = ["Mike Dev", "John Makenzie", "Léa Grande"];
+// variable d'affichage du paragraphe du formulaire
+const ajout = document.querySelector("#validationAjout");
+// remplissage du paragraphe du formulaire
+ajout.textContent = "Saisissez un utilisateur pour l'ajouter.";
 
-for(let i = 0; i < utilisateurs.length; i++){
-    console.log(utilisateurs[i]);
+// console log des utilisateurs
+for (let i = 0; i < utilisateurs.length; i++) {
+  console.log(utilisateurs[i]);
 }
 
+// changement du style appliqué au titre H1
 document.querySelector("h1").setAttribute("style", "text-transform: uppercase");
 
-const maListe = document.querySelector("#listeInscrits");
+// fonction pour générer la liste des utilisateurs à partir du tableau
+function genererListeUtilisateurs() {
+  const maListe = document.querySelector("#listeInscrits");
+  maListe.innerHTML = ""; // Efface la liste existante
 
+  // ajout d'une ligne à la liste pour chaque occurence dans l'array utilisateurs
+  for (let i = 0; i < utilisateurs.length; i++) {
+    const monLi = document.createElement("li"); // création des éléments 'li' dans l'élément 'ul'
+    let prenom = utilisateurs[i].split(" ")[0];
+    let nom = utilisateurs[i].split(" ")[1];
 
-for(let i = 0; i < utilisateurs.length; i++){
+    let prenomMaj = prenom[0].toUpperCase() + prenom.slice(1);
+    let nomMaj = nom[0].toUpperCase() + nom.slice(1);
 
-   const monLi = document.createElement('li');
-   monLi.textContent = utilisateurs[i];
-   maListe.appendChild(monLi);
-
+    monLi.textContent = `${prenomMaj} ${nomMaj}`;
+    maListe.appendChild(monLi);
+  }
 }
 
-function genererTableau(){
- 
-    const monTableau = document.createElement("table");
+// fonction pour générer la table dans le HTML
+function genererTableau() {
+  // création d'un élément table dans le HTML
+  const monTableau = document.createElement("table");
+  // création de l'entête de cette table
+  const monHeader = monTableau.createTHead();
+  // insertion de l'entête
+  const ligneHeader = monHeader.insertRow();
+  // array qui stocke les textes d'entête
+  const titreTableau = ["Nom", "Prenom", "Email", "Supprimer"];
 
-    const monHeader = monTableau.createTHead();
+  // fonction pour créer l'entête de la table
+  function creerCelluleTitre(text, row) {
+    let maCellule = document.createElement("th"); // création d'une cellule thead
+    maCellule.textContent = text;
+    row.appendChild(maCellule);
+  }
 
-    const ligneHeader = monHeader.insertRow();
-    
-    const titreTableau = ["Nom", "Prenom", "Email", "Supprimer"];
-    
-    function creerCelluleTitre(text, row){
-    
-        let maCellule = document.createElement("th");
-        maCellule.textContent = text;
-        row.appendChild(maCellule);
-    }
-    
-    for(let i= 0; i < titreTableau.length; i++){
-        creerCelluleTitre(titreTableau[i], ligneHeader);
-    }
-    
-    const monBody = monTableau.createTBody();
-    
-    function creerCellule(text, row){
-        let maCellule = row.insertCell();
-        maCellule.textContent = text;
-        // pas d'appendchild parce que le row est fait tout seul comme insertCell est une fonction built-in de JS
-        return maCellule;
-    }
-    
-    for(let i=0; i < utilisateurs.length; i++){
-       const nouvelleLigneBody = monBody.insertRow();
-       let prenom = utilisateurs[i].split(" ")[0];
-       let nom = utilisateurs[i].split(" ")[1];
-       let email = `${prenom}.${nom}@example.com`;
-       let supprimer = "x";
-       creerCellule(nom, nouvelleLigneBody);
-       creerCellule(prenom, nouvelleLigneBody);
-       creerCellule(email, nouvelleLigneBody);
-       let sup = creerCellule(supprimer, nouvelleLigneBody);
-       sup.setAttribute("style", "text-align:center");
+  // boucle pour que la création se répète autant de fois qu'il y a d'entrée dans l'array
+  for (let i = 0; i < titreTableau.length; i++) {
+    creerCelluleTitre(titreTableau[i], ligneHeader);
+  }
+
+  // création du body de la table
+  const monBody = monTableau.createTBody();
+
+  // fonction pour créer des cellules tr dans la table (les lignes / row)
+  function creerCellule(text, row, index) {
+    let maCellule = row.insertCell(); // création d'une cellule tr
+    maCellule.textContent = text;
+
+    // condition pour supprimer une entrée de la liste ET de la table quand le "x" est cliqué
+    if (text === "x") {
+      maCellule.classList.add("supprimer-cellule"); // Ajout de la classe
+      maCellule.addEventListener("click", function () {
+        utilisateurs.splice(index, 1);
+        document.querySelector("table").remove();
+        ajout.textContent = `Un utilisateur a été supprimé.`;
+        genererTableau();
+        genererListeUtilisateurs();
+      });
     }
 
-    document.querySelector(".container").appendChild(monTableau);
+    return maCellule;
+  }
+
+  // fonction pour retirer les accents pour l'adresse mail
+
+  function normaliserChaine(chaine) {
+    return chaine
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .toLowerCase(); // + mettre l'adresse mail en minuscule
+  }
+
+  // création et remplissage des lignes à partir de la liste et des entrées utilisateurs
+
+  for (let i = 0; i < utilisateurs.length; i++) {
+    const nouvelleLigneBody = monBody.insertRow();
+    let prenom = utilisateurs[i].split(" ")[0]; // on prend l'objet de l'array et on le divise
+    let nom = utilisateurs[i].split(" ")[1]; // avant et après le " "
+    let prenomMaj = prenom[0].toUpperCase() + prenom.slice(1);
+    let nomMaj = nom[0].toUpperCase() + nom.slice(1);
+    let prenomNormalise = normaliserChaine(prenom);
+    let nomNormalise = normaliserChaine(nom);
+    let email = `${prenomNormalise}.${nomNormalise}@example.com`; // concaténation pour reconstruire une adresse mail
+    let supprimer = "x"; // futur """bouton""" pour supprimer les lignes
+    creerCellule(nomMaj, nouvelleLigneBody, i); // Passage de l'indice i
+    creerCellule(prenomMaj, nouvelleLigneBody, i); // Passage de l'indice i
+    creerCellule(email, nouvelleLigneBody, i); // Passage de l'indice i
+    let sup = creerCellule(supprimer, nouvelleLigneBody, i); // Passage de l'indice i
+    sup.setAttribute("style", "text-align:center");
+  }
+
+  document.querySelector(".container").appendChild(monTableau);
 }
 
+// appel des fonctions pour générer le tableau et la liste
 genererTableau();
+genererListeUtilisateurs();
 
+// récupération des données ajoutées
 const monBouton = document.querySelector("#btnInscription");
-
 const prenom = document.querySelector("#txtPrenom");
 const nom = document.querySelector("#txtNom");
 
-monBouton.addEventListener('click', function(){
+// évenement pour ajouter des utilisateurs à partir du formulaire
 
-    let chaineInscription = prenom.value + " " + nom.value;
-    utilisateurs.push(chaineInscription);
-    document.querySelector("table").remove();
-    genererTableau();
+monBouton.addEventListener("click", function () {
+  let chaineInscription = prenom.value + " " + nom.value;
+  // ajout à la fin de la liste
+
+  utilisateurs.push(chaineInscription);
+  // affichage du paragraphe formulaire
+  
+  ajout.innerHTML = `L'utilisateur <span id="maj">${prenom.value} ${nom.value}</span> a été ajouté(e).`;
+  // suppression du tableau existant
+  document.querySelector("table").remove();
+  // nouvelle génération des listes MAJ
+  genererTableau();
+  genererListeUtilisateurs();
+  prenom.value = ""; // vide les champs
+  nom.value = ""; // une fois que l'ajout est fait
 });
-
-
