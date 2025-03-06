@@ -85,7 +85,7 @@ function genererTableau() {
 
   for (let i = 0; i < utilisateurs.length; i++) {
     const nouvelleLigneBody = monBody.insertRow();
-    let prenom = utilisateurs[i].split(" ")[0]; // on prend l'objet de l'array et on le divise 
+    let prenom = utilisateurs[i].split(" ")[0]; // on prend l'objet de l'array et on le divise
     let nom = utilisateurs[i].split(" ")[1]; // avant et après le " "
     let prenomNormalise = normaliserChaine(prenom);
     let nomNormalise = normaliserChaine(nom);
@@ -101,11 +101,11 @@ function genererTableau() {
   document.querySelector(".container").appendChild(monTableau);
 }
 
-// appel des fonctions pour générer le tableau et la liste (MAJ)
+// appel des fonctions pour générer le tableau et la liste
 genererTableau();
 genererListeUtilisateurs();
 
-
+// récupération des données ajoutées
 const monBouton = document.querySelector("#btnInscription");
 const prenom = document.querySelector("#txtPrenom");
 const nom = document.querySelector("#txtNom");
@@ -114,11 +114,15 @@ const nom = document.querySelector("#txtNom");
 
 monBouton.addEventListener("click", function () {
   let chaineInscription = prenom.value + " " + nom.value;
+  // ajout à la fin de la liste
   utilisateurs.push(chaineInscription);
+  // affichage du paragraphe formulaire
   ajout.textContent = `L'utilisateur ${prenom.value} ${nom.value} a été ajouté(e).`;
+  // suppression du tableau existant
   document.querySelector("table").remove();
+  // nouvelle génération des listes MAJ
   genererTableau();
   genererListeUtilisateurs();
-  prenom.value = "";
-  nom.value = "";
+  prenom.value = ""; // vide les champs
+  nom.value = ""; // une fois que l'ajout est fait
 });
