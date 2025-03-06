@@ -9,9 +9,8 @@ for (let i = 0; i < utilisateurs.length; i++) {
 
 document.querySelector("h1").setAttribute("style", "text-transform: uppercase");
 
-const maListe = document.querySelector("#listeInscrits");
-
 function genererListeUtilisateurs() {
+
     const maListe = document.querySelector("#listeInscrits");
     maListe.innerHTML = ""; // Efface la liste existante
   
@@ -43,36 +42,44 @@ function genererTableau() {
 
   const monBody = monTableau.createTBody();
 
-  function creerCellule(text, row) {
+  function creerCellule(text, row, index) {
     let maCellule = row.insertCell();
     maCellule.textContent = text;
-    // pas d'appendchild parce que le row est fait tout seul comme insertCell est une fonction built-in de JS
+  
+    if (text === "x") {
+      maCellule.classList.add("supprimer-cellule"); // Ajout de la classe
+      maCellule.addEventListener("click", function () {
+        utilisateurs.splice(index, 1);
+        document.querySelector("table").remove();
+        ajout.textContent = `Un utilisateur a été supprimé.`;
+        genererTableau();
+        genererListeUtilisateurs();
+      });
+    }
+  
     return maCellule;
   }
 
   function normaliserChaine(chaine) {
-    return chaine
+      return chaine
       .normalize("NFD")
       .replace(/[\u0300-\u036f]/g, "")
       .toLowerCase();
+    
   }
 
   for (let i = 0; i < utilisateurs.length; i++) {
     const nouvelleLigneBody = monBody.insertRow();
     let prenom = utilisateurs[i].split(" ")[0];
     let nom = utilisateurs[i].split(" ")[1];
-
     let prenomNormalise = normaliserChaine(prenom);
     let nomNormalise = normaliserChaine(nom);
     let email = `${prenomNormalise}.${nomNormalise}@example.com`;
-
-    //let email = `${prenom}.${nom}@example.com`;
-
     let supprimer = "x";
-    creerCellule(nom, nouvelleLigneBody);
-    creerCellule(prenom, nouvelleLigneBody);
-    creerCellule(email, nouvelleLigneBody);
-    let sup = creerCellule(supprimer, nouvelleLigneBody);
+    creerCellule(nom, nouvelleLigneBody, i); // Passage de l'indice i
+    creerCellule(prenom, nouvelleLigneBody, i); // Passage de l'indice i
+    creerCellule(email, nouvelleLigneBody, i); // Passage de l'indice i
+    let sup = creerCellule(supprimer, nouvelleLigneBody, i); // Passage de l'indice i
     sup.setAttribute("style", "text-align:center");
   }
 
