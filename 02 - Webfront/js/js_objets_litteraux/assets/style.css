@@ -1,0 +1,22 @@
+body {
+    display: block;
+    width: 80%;
+    border: 1px solid green;
+    color: green;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 10px;
+}
+
+h1 {
+    margin-left: 10px;
+}
+
+table, tbody, th, td, tr {
+    margin-left: 2cqw;
+    background-color: #90EE90;
+    border-collapse: collapse;
+    border: 5px solid white;
+    padding: 10px;
+    color: green;
+}
+
