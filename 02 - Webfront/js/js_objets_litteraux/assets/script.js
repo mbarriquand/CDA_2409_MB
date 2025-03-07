@@ -13,8 +13,7 @@ function createEmployeeTable(employee) {
 
     // 2. Create the table
     const table = document.createElement('table');
-    table.style.borderCollapse = 'collapse';
-
+    
     // 3. Create the table header (<thead>)
     const thead = document.createElement('thead');
     const headerRow = document.createElement('tr');
@@ -41,8 +40,7 @@ function createEmployeeTable(employee) {
 
     keys.forEach(key => {
         const th = document.createElement('th');
-        th.textContent = key;
-        
+        th.textContent = key;        
         headerRow.appendChild(th);
     });
 
@@ -54,9 +52,10 @@ function createEmployeeTable(employee) {
     const dataRow = document.createElement('tr');
 
     const values = Object.values(employee);
-    //insert email value.
+    // insert email value.
     values.splice(values.indexOf(employee.salary),0,`${employee.firstname.toLowerCase()}.${employee.lastname.toLowerCase()}@example.com`);
 
+    // format salary
     values.forEach(value => {
         const td = document.createElement('td');
         // Add dollar sign after salary
