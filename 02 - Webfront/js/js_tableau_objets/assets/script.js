@@ -2,7 +2,7 @@ const myH1 = document.querySelector("#myH1");
 
 myH1.innerHTML = "Espace Membres";
 
-fetch("./data.json")
+fetch("/assets/data.json")
 .then(response =>{
     return response.json()
 })
@@ -11,6 +11,7 @@ fetch("./data.json")
     afficherTableau(data);
 
 })
+/*
 
 function afficherTableau(data){
     let myData = data;
@@ -29,3 +30,4 @@ function afficherTableau(data){
     wrap.appendChild(myTable);
     
 }
+    */
