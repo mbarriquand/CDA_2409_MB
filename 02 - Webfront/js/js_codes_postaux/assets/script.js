@@ -16,7 +16,7 @@ fetch("https://arfp.github.io/tp/web/javascript/02-zipcodes/zipcodes.json")
       const zip = document.querySelector("#cp");
       let arraySolution = []; // vider l'affichage
       arraySolution = data.filter(
-        (obj) => obj.nomCommune == zip.value || obj.codePostal == zip.value
+        (obj) => obj.nomCommune == zip.value || obj.codePostal == zip.value || obj.codeCommune == zip.value
       );
 
       if (arraySolution != "undefined") {
@@ -46,7 +46,7 @@ function remplirDataList(data) {
 
   for (let i = 0; i < data.length; i++) {
     const myOption = new Option(); // création d'un constructeur
-    myOption.value = data[i].codeCommune;
+    myOption.value = data[i].nomCommune;
     myOption.textContent = data[i].nomCommune + " cp : " + data[i].codePostal;
 
     datalist.appendChild(myOption);
