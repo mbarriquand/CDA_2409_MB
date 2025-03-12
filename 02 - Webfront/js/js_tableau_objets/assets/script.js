@@ -1,5 +1,12 @@
 const myH1 = document.querySelector("#myH1");
 
+const login = document.querySelector("#loginBtn");
+
+const memberId = document.querySelector("#id");
+const password = document.querySelector("#mdp");
+
+
+
 myH1.innerHTML = "Espace Membres";
 
 fetch("/assets/data.json")
@@ -11,6 +18,8 @@ fetch("/assets/data.json")
     afficherTableau(data);
 
 })
+
+
 /*
 
 function afficherTableau(data){
