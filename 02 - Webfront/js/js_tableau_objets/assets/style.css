@@ -1,0 +1,42 @@
+body {
+    background-color: #D3BDB0;
+    width: auto;
+    height: auto;
+    margin: 10px;
+    font-family: Tahoma, sans-serif;
+    color: #715B64;
+    border: 1px solid #715B64;
+
+}
+
+.group1, .group2 {
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+}
+
+form {
+    margin: 10px;
+    padding: 20px;
+    border: 1px dashed #715B64;
+}
+
+input {
+    background-color: #C1AE9F;
+    border: 1px solid rgba(8, 96, 8, 0.655);
+    height: 20px;
+    border-radius: 2px;
+}
+
+#btn {
+    background-color: #C1AE9F;
+    color: #715B64;
+    border: 1px solid rgba(8, 96, 8, 0.655);
+    padding: 8px;
+    border-radius: 2px;
+}
+
+h1 {
+    font-size: 2rem;
+    padding-left: 15px;
+}
