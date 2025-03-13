@@ -1,0 +1,32 @@
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 40px;
+}
+
+h1 {
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+table {
+    font-size: 0.8rem;
+    border-collapse: collapse;
+    border: 1px solid rgba(103, 103, 103, 0.625); 
+}
+
+thead, th {
+    text-align: center;
+    background-color: #DDDDDD;
+    border-left: 1px solid rgba(103, 103, 103, 0.625); 
+    border-bottom: 1px solid rgba(103, 103, 103, 0.625);
+    padding: 10px;
+}
+
+td { 
+    border-bottom: 1px solid rgba(103, 103, 103, 0.625);    
+    padding: 15px;
+}
+
+tr:nth-child(even) {
+    background-color: #EEEEEE;
+}
