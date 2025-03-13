@@ -40,7 +40,7 @@ function generateTable(tableId) {
 
         data.forEach(card2 => {
 
-        ratio = card2.victory / card2.defeat;
+        ratio =  card2.victory / card2.played;
 
             if(bestRatio < ratio){
                 bestRatio = ratio;
