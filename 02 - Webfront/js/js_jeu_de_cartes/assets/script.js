@@ -30,7 +30,7 @@ function generateTable(tableId) {
         });
 
         const pone = document.querySelector("#one");
-        pone.innerText = `La carte avec le plus de parties jouées est : ${playerName} avec ${amountOfVictory} victoires`;
+        pone.innerText = `La carte avec le plus de parties jouées est : "${playerName}" avec ${amountOfVictory} victoires`;
 
         let ratio = 0;
         let bestRatio = 0;
@@ -51,7 +51,7 @@ function generateTable(tableId) {
         })
 
         const ptwo = document.querySelector("#two");
-        ptwo.textContent = `La carte avec le meilleur ratio est ${playerName2} avec : ${amountOfGame2} parties jouées et ${amountOfVictory2} parties gagnées pour un ratio de : ${bestRatio.toFixed(2)}`;
+        ptwo.textContent = `La carte avec le meilleur ratio est "${playerName2}" avec ${amountOfGame2} parties jouées et ${amountOfVictory2} parties gagnées pour un ratio de : ${bestRatio.toFixed(3)}`;
         
         const table = document.getElementById(tableId);
         if (!table) {
