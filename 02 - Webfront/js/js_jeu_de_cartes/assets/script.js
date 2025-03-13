@@ -1,6 +1,6 @@
 // Génération et remplissage du tableau
 
-
+generateTable('cardTable');
 
 function generateTable(tableId) {
     fetch("https://arfp.github.io/tp/web/javascript/03-cardgame/cardgame.json")
@@ -15,7 +15,44 @@ function generateTable(tableId) {
           console.error('Invalid or empty JSON data.');
           return;
         }
-  
+
+      let mostPlayed = 0;
+      let playerName = "";
+      let amountOfVictory = 0;
+
+        data.forEach(card => {
+      
+            if(mostPlayed < card.played ){
+                mostPlayed = card.played;
+                playerName = card.name;
+                amountOfVictory = card.victory
+            }
+        });
+
+        const pone = document.querySelector("#one");
+        pone.innerText = `La carte avec le plus de parties jouées est : ${playerName} avec ${amountOfVictory} victoires`;
+
+        let ratio = 0;
+        let bestRatio = 0;
+        let playerName2 = "";
+        let amountOfGame2 = "";
+        let amountOfVictory2 = 0;
+
+        data.forEach(card2 => {
+
+        ratio = card2.victory / card2.defeat;
+
+            if(bestRatio < ratio){
+                bestRatio = ratio;
+                playerName2 = card2.name;
+                amountOfGame2 = card2.played;
+                amountOfVictory2 = card2.victory;
+            }
+        })
+
+        const ptwo = document.querySelector("#two");
+        ptwo.textContent = `La carte avec le meilleur ratio est ${playerName2} avec : ${amountOfGame2} parties jouées et ${amountOfVictory2} parties gagnées pour un ratio de : ${bestRatio.toFixed(2)}`;
+        
         const table = document.getElementById(tableId);
         if (!table) {
           console.error(`Table with ID "${tableId}" not found.`);
@@ -53,10 +90,3 @@ function generateTable(tableId) {
       });
   }
   
-  generateTable('cardTable');
-  
-  const pone = document.querySelector("#one");
-  pone.textContent = `ici un affichage`;
-  
-  const ptwo = document.querySelector("#two");
-  ptwo.textContent = `ici un autre affichage`;
