@@ -1,0 +1,70 @@
+body {
+    display: block;
+    margin: 50px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+h1 {
+    text-transform: uppercase;
+    font-size: 2.5rem;
+}
+
+#update-message {
+    font-weight: bold;
+    color: green;
+    text-transform: uppercase;
+}
+
+#error-message {
+    font-weight: bold;
+    color: rgba(231, 26, 26, 0.692);
+    text-transform: uppercase;
+}
+
+#name{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+
+input {
+    margin: 10px 0px;
+    width: 250px;
+    padding: 7px;
+    border-radius: 5px;
+}
+
+
+table {
+    width: 60%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  th {
+    text-align: center;
+    text-transform: uppercase;
+    background-color: #f2f2f2;
+  }
+
+  tr {
+    background-color: #ffffff;
+  }
+
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+button, .deleteButton {
+    padding: 7px;
+    border-radius: 5px;
+    font-family: 'Courier New', Courier, monospace;
+    text-transform: uppercase;
+}
+
+.deleteColumn{
+    text-align: center;
+}

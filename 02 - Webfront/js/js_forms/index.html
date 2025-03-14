@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/style.css">
+    <script src="./assets/script.js" async></script>
+    <title>Birthday Registry</title>
+</head>
+
+<body>
+    <h1>🎂 Birthday Registry</h1>
+
+    <form id="birthdayForm">
+        <label for="name">😊 Name:</label><br>
+        <input type="text" id="name" name="name" placeholder="Name"><br><br>
+
+        <label for="dob">📅 Date of Birth:</label><br>
+        <input type="date" id="dob" name="dob"><br><br>
+
+        <button type="button" onclick="addBirthday()">Add Birthday</button>
+        <button type="button" onclick="resetAll()">Reset All</button>
+    </form>
+    <p id="update-message"></p>
+    <p id="error-message"></p>
+
+    <div id="tableContainer"></div>
+</body>
+
+</html>
