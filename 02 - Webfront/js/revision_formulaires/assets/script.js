@@ -1,7 +1,7 @@
 let birthdays = []; // Creates an empty array
 let tableCreated = false;
 
-// Fetch and add initial birthdays from a JSON file
+// Fetches and add initial birthdays from a JSON file
 function fetchData() {
     fetch('./assets/data.json')
         .then(response => {
@@ -20,7 +20,7 @@ function fetchData() {
         });
 }
 
-// Call fetchInitialBirthdays on page load
+// Calls fetchData on page load
 fetchData();
 
 // Calculates age from user input of dob
@@ -97,7 +97,7 @@ function showUpdateMessage(name) {
     }, 5000); // Clear message after 5 seconds
 }
 
-// Capitalize the first later of the user name
+// Capitalizes the first later of the user name
 function capitalizeFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
 }
@@ -141,10 +141,10 @@ function updateTable() {
         const starSignCell = row.insertCell(3);
         const actionsCell = row.insertCell(4);
 
-        // Capitalize the first letter of the name
+        // Capitalizes the first letter of the name
         nameCell.textContent = capitalizeFirstLetter(birthday.name);
 
-        // Format the date of birth
+        // Formats the date of birth
         const dobDate = new Date(birthday.dob);
         const day = String(dobDate.getDate()).padStart(2, '0');
         const month = String(dobDate.getMonth() + 1).padStart(2, '0'); // Months are 0-indexed
@@ -175,7 +175,7 @@ function deleteRow(index) {
     showDeleteMessage(deletedName);
 }
 
-// Update message on deletion
+// Displays update message on deletion
 function showDeleteMessage(name) {
     const updateMessage = document.getElementById("update-message");
     updateMessage.textContent = `${name} has been deleted! 🗑️`;
@@ -188,13 +188,13 @@ function showDeleteMessage(name) {
 function resetAll() {
     const errorMessage = document.getElementById("error-message");
 
-    // Update message if the table is empty
+    // Displays update message if the table is empty
     if (birthdays.length === 0) {
         errorMessage.textContent = "The birthday registry is already empty! 🤨";
         return;
     }
 
-    // Confirmation pop-up before deletion
+    // Displays confirmation pop-up before deletion of the entire table
     if (window.confirm("😧 Are you sure you want to delete all birthdays?")) {
         birthdays = [];
         tableCreated = false;
