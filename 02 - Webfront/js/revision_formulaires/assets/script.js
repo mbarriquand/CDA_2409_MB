@@ -1,23 +1,20 @@
 let birthdays = []; // Creates an empty array
 let tableCreated = false;
 
-// Fetches and add initial birthdays from a JSON file
-function fetchData() {
-    fetch('./assets/data.json')
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Could not fetch data.');
-            }
-            return response.json();
-        })
-        .then(data => {
-            birthdays = birthdays.concat(data);
-            updateTable();
-        })
-        .catch(error => {
-            console.error('Error fetching json:', error);
-            document.getElementById("error-message").textContent = "Error loading data.";
-        });
+// Fetches and adds initial birthdays from a JSON file using async/await
+async function fetchData() {
+    try {
+        const response = await fetch('./assets/data.json');
+        if (!response.ok) {
+            throw new Error('Could not fetch data.');
+        }
+        const data = await response.json();
+        birthdays = birthdays.concat(data);
+        updateTable();
+    } catch (error) {
+        console.error('Error fetching json:', error);
+        document.getElementById("error-message").textContent = "Error loading data.";
+    }
 }
 
 // Calls fetchData on page load
@@ -88,7 +85,7 @@ function addBirthday() {
     showUpdateMessage(name);
 }
 
-// Displays update message on addition
+// Displays update message for five seconds on addition
 function showUpdateMessage(name) {
     const updateMessage = document.getElementById("update-message");
     updateMessage.textContent = `${name} has been added! 🎉`;
@@ -106,6 +103,7 @@ function capitalizeFirstLetter(string) {
 function updateTable() {
     const tableContainer = document.getElementById("tableContainer");
 
+    // Creates the table (only if it didn't exist before)
     if (!tableCreated) {
         const table = document.createElement("table");
         table.id = "birthdayTable";
@@ -119,7 +117,6 @@ function updateTable() {
             headerRow.appendChild(th);
         });
 
-        // Creates the table (only if it didn't exist before)
         thead.appendChild(headerRow);
         table.appendChild(thead);
 
@@ -175,7 +172,7 @@ function deleteRow(index) {
     showDeleteMessage(deletedName);
 }
 
-// Displays update message on deletion
+// Displays update message for five seconds on deletion
 function showDeleteMessage(name) {
     const updateMessage = document.getElementById("update-message");
     updateMessage.textContent = `${name} has been deleted! 🗑️`;
@@ -188,7 +185,7 @@ function showDeleteMessage(name) {
 function resetAll() {
     const errorMessage = document.getElementById("error-message");
 
-    // Displays update message if the table is empty
+    // Displays update message if the table was already empty
     if (birthdays.length === 0) {
         errorMessage.textContent = "The birthday registry is already empty! 🤨";
         return;
