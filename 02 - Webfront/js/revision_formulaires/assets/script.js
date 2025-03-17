@@ -1,6 +1,28 @@
 let birthdays = []; // Creates an empty array
 let tableCreated = false;
 
+// Fetch and add initial birthdays from a JSON file
+function fetchData() {
+    fetch('./assets/data.json')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Could not fetch data.');
+            }
+            return response.json();
+        })
+        .then(data => {
+            birthdays = birthdays.concat(data);
+            updateTable();
+        })
+        .catch(error => {
+            console.error('Error fetching json:', error);
+            document.getElementById("error-message").textContent = "Error loading data.";
+        });
+}
+
+// Call fetchInitialBirthdays on page load
+fetchData();
+
 // Calculates age from user input of dob
 function calculateAge(dob) {
     const today = new Date();
